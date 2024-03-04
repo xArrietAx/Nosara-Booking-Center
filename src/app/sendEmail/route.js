@@ -3,7 +3,7 @@ import { createTransport } from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { email, serviceName, name, subject = "Reserva de", service = "", phone = "none", list = false } = await req.json();
+    const { email, message = "", name, subject = "Reserva de", service = "", phone = "none", list = false } = await req.json();
 
     let transport = await createTransport({
       host: "smtp.hostinger.com",
@@ -21,10 +21,13 @@ export async function POST(req) {
     <br />
 
     <h2>${subject + " " + service}</h2>
-    
-    <p>${serviceName}</p>
-  
     <br />
+
+    ${message}
+
+    <br />
+    <br />
+
     
     <p>Email del cliente: ${email}</p>
     <p>Numero del cliente: ${phone}</p>

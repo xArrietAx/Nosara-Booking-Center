@@ -1,5 +1,6 @@
 "use client";
 import axios from "axios";
+import toast from "react-hot-toast";
 import { useState } from "react";
 
 export function Form() {
@@ -9,29 +10,20 @@ export function Form() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-  const [showToast, setShowToast] = useState(false);
 
   async function SendEmail() {
     try {
       setLoading(true);
-      setShowToast(true)
       const res = await axios.post("/sendEmail", {
         name,
         email,
         subject,
         message,
       });
-      setSuccess(res.data.message);
+      toast.success(res.data.message);
     } catch (error) {
-      setError(error?.response?.data?.message);
+      toast.error(error?.response?.data?.message);
     } finally {
-      setTimeout(() => {
-        setError("");
-        setSuccess("");
-        setShowToast(false)
-      }, 4000);
       setLoading(false);
       setName("");
       setEmail("");
@@ -122,28 +114,6 @@ export function Form() {
         {loading ? <span className="loading loading-spinner" /> : "Send"}
       </button>
 
-     <Toast showToast={showToast} success={success} error={error} />
-
     </form>
   );
-}
-
-function Toast({showToast, success, error}) {
-  return <>
-   {showToast ? (
-        error ? (
-          <div className="toast toast-center">
-            <div className="alert alert-error">
-              <span className="text-white">{error}</span>
-            </div>
-          </div>
-        ) : (
-          <div className={`toast toast-center ${success ? null : "hidden"}`}>
-            <div className="alert alert-success">
-              <span className="text-white">{success}</span>
-            </div>
-          </div>
-        )
-      ) : null}
-  </>
 }

@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Toaster } from 'react-hot-toast';
 import "./globals.css";
 
 const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"], display:"swap" });
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          <Toaster />
       </body>
     </html>
   );

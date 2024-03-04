@@ -1,28 +1,21 @@
 "use client"
-import { useToast } from "@/hooks/useToast";
 import { MdOutlineContentCopy } from "react-icons/md";
+import toast from 'react-hot-toast';
 
 export const Copy = ({str}) => {
 
-  const {Toast, setShowToast, setError, setSuccess, ResetTimeOut} = useToast()
 
   const copyToClipboard = async str => {
     try {
       await navigator.clipboard.writeText(str);
-      setShowToast(true)
-      setSuccess("Copied")
+      toast.success("Copied")
     } catch (error) {
       console.log(error);
-      setError("Could not copy")
-    } finally {
-      ResetTimeOut()
+      toast.error("Could not copy")
     }
   };
 
   return (
-    <>
     <button className="btn btn-sm btn-square" onClick={e => copyToClipboard(str)}><MdOutlineContentCopy fontSize={"20px"} /></button>
-    <Toast />
-    </>
   )
 }

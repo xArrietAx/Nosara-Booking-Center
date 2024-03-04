@@ -3,16 +3,8 @@
 import Link from "next/link";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Logo } from "./Logo";
-import { useEffect } from "react";
-
 
 export function Nav() {
-
-  useEffect(() => {
-
-      window.scrollTo(0, 0); 
-
-  }, []);
 
   function CloseDrawer(e) {
     const drawer = document.getElementById("my-drawer");
