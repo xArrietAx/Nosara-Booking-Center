@@ -138,7 +138,7 @@ export function Book({firstCard = ""}) {
 
       </form>
 
-      <button className="btn btn-circle fixed bottom-5 right-5 hidden border text-white bg-green-500 shadow lg:block" onClick={() => {setOpen(true), document.documentElement.style.overflowY = "hidden" }} >Book</button>
+      <button className="btn btn-circle fixed bottom-5 right-5 hidden w-14 h-14 border text-white bg-green-500 shadow lg:block" onClick={() => {setOpen(true), document.documentElement.style.overflowY = "hidden" }} >Book</button>
 
       <div className={`hidden fixed top-0 left-0 z-50 items-center justify-center w-screen h-screen bg-[#00000073] transition-[visibility opacity] duration-700 lg:flex ${open ? "opacity-100" :"invisible opacity-0"}`}>
         
@@ -147,9 +147,9 @@ export function Book({firstCard = ""}) {
           e.preventDefault(), SendEmail();
         }}>
 
-          <div className="relative w-full">
-            <span className="inline-block w-full font-[600] text-center text-lg">Book now!</span>
-            <IoClose className="absolute top-0 left-0" fontSize={"22px"} onClick={() => {setOpen(false), document.documentElement.style.overflowY = "auto" }} />
+          <div className="relative w-full  mb-3">
+            <span className="inline-block w-full font-[600] text-center text-xl">Book now!</span>
+            <IoClose className="absolute top-0 left-0" fontSize={"26px"} onClick={() => {setOpen(false), document.documentElement.style.overflowY = "auto" }} />
           </div>
 
         <div>
