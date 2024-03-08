@@ -44,7 +44,7 @@ p{
 
 .grid_products{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
     gap: 2em;
 }
 
@@ -150,4 +150,23 @@ p{
 .card:hover .icon {
     background-position: -120px;
     transition: all 0.3s ease;
+}
+
+
+.menu li > *:not(ul):not(.menu-title):not(details):active, .menu li > *:not(ul):not(.menu-title):not(details).active, .menu li > details > summary:active {
+    background-color: #1f29373f;
+    color: #1f2937;
+}
+
+
+.react-international-phone-input-container .react-international-phone-input {
+    height: 42px;
+    border: none;
+    font-size: 0.875rem;
+    background-color: rgba(83, 69, 69, 0);
+    @apply text-gray-900
+}
+
+.react-international-phone-country-selector-button {
+    height: 42px;
 }

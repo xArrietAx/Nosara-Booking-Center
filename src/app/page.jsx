@@ -2,7 +2,7 @@ import { ServiceYouNeed } from "@/components/ServiceYouNeed";
 import { Catalogue } from "@/components/MainPage/Catalogue";
 import { ImagesCr } from "@/components/MainPage/ImagesCr";
 import { Montserrat } from "next/font/google";
-import { AnotherService } from "@/components/MainPage/AnotherService";
+import { AnotherService } from "@/components/AnotherService";
 
 const montserrat = Montserrat({
   weight: "700",
@@ -25,13 +25,13 @@ export default function Home() {
             <p className="max-w-[750px] font-[400] text-[max(15px,min(2vw,20px))] text-center ">
               On our site you can discover and book exciting services to enjoy
               your stay in Nosara such as ATV tours, golf cart rentals,
-              massages, yoga and much more.
+              massages, yoga and much more
             </p>
           </div>
         </div>
       </section>
       <Catalogue />
-      {/* <AnotherService /> */}
+      <AnotherService />
       <ServiceYouNeed />
       <ImagesCr />
     </main>

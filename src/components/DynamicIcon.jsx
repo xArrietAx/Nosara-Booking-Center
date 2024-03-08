@@ -6,6 +6,7 @@ import { LuChefHat } from "react-icons/lu";
 import { Atv } from "@/Icons/Atv";
 import { GolfCart } from "@/Icons/GolfCart";
 import {Massage } from "@/Icons/Massage";
+import { ZipLine } from "@/Icons/ZipLine";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaCarSide } from "react-icons/fa6";
 
@@ -23,7 +24,8 @@ export const DynamicIcon = ({iconName}) => {
         GolfCart: <GolfCart fill="white" />,
         Massage: <Massage fill="white" />,
         AiOutlineShoppingCart:<AiOutlineShoppingCart fontSize="40px" color="white" />,
-        FaCarSide: <FaCarSide fontSize="40px" color="white" />
+        FaCarSide: <FaCarSide fontSize="40px" color="white" />,
+        ZipLine: <ZipLine fill="white" />
     };
 
   return iconsMap[iconName];

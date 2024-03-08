@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Providers } from "@/components/Services/Providers";
 import { Skeleton } from "@/components/Skeletons/CatalogueSkeleton";
 import { ServiceYouNeed } from "@/components/ServiceYouNeed";
-import { AnotherService } from "@/components/MainPage/AnotherService";
+import { AnotherService } from "@/components/AnotherService";
 
 export default function page() {
   return (
@@ -20,7 +20,7 @@ export default function page() {
           <Providers />
         </Suspense>
       </section>
-      {/* <AnotherService /> */}
+      <AnotherService />
       <ServiceYouNeed />
     </main>
   );

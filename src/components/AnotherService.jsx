@@ -5,52 +5,54 @@ import { FiExternalLink } from "react-icons/fi";
 export const AnotherService = () => {
 
     const data = [
+        // {
+        //     title:"Shopping",
+        //     paragraph:"Enjoy hassle-free shopping with our shopping services! Let us handle your errands and deliver your purchases straight to your door, saving you time and effort.",
+        //     href:"/Shopping_service",
+        //     img:{
+        //         src:"/Shopping.jpg",
+        //         alt:"Shopping",
+        //         width:"1920",
+        //         height:"1280"
+        //     }
+        // },
         {
-            title:"Shopping",
-            paragraph:"Enjoy hassle-free shopping with our personalized shopping services! Let us handle your errands and deliver your purchases straight to your door, saving you time and effort.",
-            href:"/Shopping_service",
-            img:{
-                src:"/Shopping.jpg",
-                alt:"Shopping",
-                width:"1920",
-                height:"1280"
-            }
+          title: "Nanny",
+          paragraph:
+            "Discover peace of mind with our professional nanny services! Our experienced team provides reliable and caring support, ensuring your little ones are in safe hands while you're away.",
+          href: "/ContactUs",
+          img: {
+            src: "/Nanny.jpg",
+            alt: "Nanny",
+            width: "1920",
+            height: "1280",
+          },
         },
         {
-            title:"Nanny",
-            paragraph:"Discover peace of mind with our professional nanny services! Our experienced team provides reliable and caring support, ensuring your little ones are in safe hands while you're away.",
-            href:"/ContactUs",
-            img:{
-                src:"/Nanny.jpg",
-                alt:"Nanny",
-                width:"1920",
-                height:"1280"
-            }
+          title: "Cleaning",
+          paragraph:
+            "Experience the difference with our professional cleaning services! Let our expert team tackle the dirt and grime, leaving your space sparkling clean.",
+          href: "/ContactUs",
+          img: {
+            src: "/Cleaning.jpg",
+            alt: "Cleaning",
+            width: "1920",
+            height: "1280",
+          },
         },
         {
-            title:"Cleaning",
-            paragraph:"Experience the difference with our professional cleaning services! Let our expert team tackle the dirt and grime, leaving your space sparkling clean.",
-            href:"/ContactUs",
-            img:{
-                src:"/Cleaning.jpg",
-                alt:"Cleaning",
-                width:"1920",
-                height:"1280"
-            }
-            
+          title: "Chef",
+          paragraph:
+            "Enjoy a unique gastronomic experience with our local chefs. They create exquisite dishes in your home, adapted to your tastes, to make each meal a memorable moment.",
+          href: "/ContactUs",
+          img: {
+            src: "/Chef.jpg",
+            alt: "Chef",
+            width: "1920",
+            height: "1280",
+          },
         },
-        {
-            title:"Canopy tour",
-            paragraph:"Enjoy the exhilarating canopy tour, gliding through the treetops in Nosara. Immerse yourself in nature as you traverse suspended cables between forest platforms.",
-            href:"/Canopy_tour",
-            img:{
-                src:"/ZipLine.jpg",
-                alt:"ZipLine",
-                width:"1920",
-                height:"1280"
-            }
-        }
-    ]
+    ];
 
   return (
     <section className="container">
@@ -60,14 +62,14 @@ export const AnotherService = () => {
         We can help you with <br /> these service too
         </h2>
 
-       <div className="grid grid-cols-4 ">
+       <div className="grid grid-cols-2">
        {data.map((ele, i) => {
         return (
             <div key={i + Date + Math.random()} className="space-y-5" >
-              <div className="rounded-3xl overflow-hidden">
+              <div className="overflow-hidden">
               <Image className="transition-transform duration-500 hover:scale-110" src={ele.img.src} alt={ele.img.alt} width={ele.img.width} height={ele.img.height} />
               </div>
-              <div className="space-y-1 min-h-[160px] sm:min-h-min">
+              <div className="space-y-1 min-h-[150px] sm:min-h-min">
               <span className="inline-block w-full font-[600] uppercase">{ele.title}</span>
               <p>{ele.paragraph}</p>
               </div>

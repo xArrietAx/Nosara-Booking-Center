@@ -56,7 +56,7 @@ export async function Info({ service }) {
                   <div className="grid_services">
                     {ele.Cards.map((ele, i) => {
                       return (
-                        <div className="flex flex-col gap-5 w-full p-5 border rounded-3xl bg-[#fdfdfd] shadow" key={i + Date + Math.random()}>
+                        <div className="flex flex-col gap-5 w-full max-w-3xl p-5 border rounded-3xl bg-[#fdfdfd] shadow" key={i + Date + Math.random()}>
                           <div className="space-y-2">
                             <div className="flex items-center justify-between gap-3">
                             <h4 className="font-[600] text-lg uppercase">
