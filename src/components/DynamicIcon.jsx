@@ -9,6 +9,7 @@ import {Massage } from "@/Icons/Massage";
 import { ZipLine } from "@/Icons/ZipLine";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaCarSide } from "react-icons/fa6";
+import { IoRestaurantSharp } from "react-icons/io5";
 
 export const DynamicIcon = ({iconName}) => {
 
@@ -25,7 +26,8 @@ export const DynamicIcon = ({iconName}) => {
         Massage: <Massage fill="white" />,
         AiOutlineShoppingCart:<AiOutlineShoppingCart fontSize="40px" color="white" />,
         FaCarSide: <FaCarSide fontSize="40px" color="white" />,
-        ZipLine: <ZipLine fill="white" />
+        ZipLine: <ZipLine fill="white" />,
+        IoRestaurantSharp: <IoRestaurantSharp fontSize="40px" color="white" />
     };
 
   return iconsMap[iconName];

@@ -37,7 +37,17 @@ export const metadata = {
     "Nanny Nosara",
     "Cleaning service Nosara",
     "Chef Nosara"
-]
+],
+robots: {
+  index: true,
+  follow: true,
+  nocache: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    noimageindex: true,
+  },
+},
 };
 
 export default function RootLayout({ children }) {

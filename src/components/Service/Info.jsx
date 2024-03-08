@@ -1,20 +1,9 @@
-import { notFound } from "next/navigation";
 import { Book } from "./Book";
-import { client } from "@/libs/contenful";
 import Image from "next/image";
 import { ServiceYouNeed } from "../ServiceYouNeed";
 import { Copy } from "./Copy";
-import { Example } from "../Example";
 
-async function getData(service) {
-  try {
-    return await client.getEntry(service);
-  } catch (err) {
-    return notFound();
-  }
-}
-
-export async function Info({ service }) {
+export async function Info({ service, getData }) {
 
   const data = await getData(service);
 
@@ -83,14 +72,14 @@ export async function Info({ service }) {
                             ) : null}
 
                           {ele.Include ? (
-                            <div className="flex flex-col gap-1">
-                              <span className="font-[600]">INCLUDE</span>
-                              <ul className="space-y-1">
-                                {ele.Include.map((ele, i) => {
-                                  return <li key={i + Date + Math.random()}>{ele.include}</li>;
-                                })}
-                              </ul>
-                            </div>
+                           <div className="flex flex-col gap-1">
+                           <span className="font-[600]">Include</span>
+                           <ul className="space-y-1">
+                             {ele.Include.map((ele, i) => {
+                               return <li dangerouslySetInnerHTML={{__html: ele.include }} key={i + Date + Math.random()} />
+                             })}
+                           </ul>
+                         </div>
                           ) : null}
                         </div>
                       );
