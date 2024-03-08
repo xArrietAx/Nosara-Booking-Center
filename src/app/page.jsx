@@ -10,22 +10,25 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+
+export const metadata = {
+  title: 'Nosara Booking Center: Your best choice for booking tours and activities in Nosara',
+}
+
 export default function Home() {
   return (
     <main className="mb-36">
       <section className="container">
         <div className="h-[340px] mt-24 md:h-[400px] md:mt-14">
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-center gap-3">
             <h1
               className={`${montserrat.className} text-[max(48px,min(5vw,76px))] text-center`}
             >
               Nosara Booking Center
             </h1>
 
-            <p className="max-w-[750px] font-[400] text-[max(15px,min(2vw,20px))] text-center ">
-              On our site you can discover and book exciting services to enjoy
-              your stay in Nosara such as ATV tours, golf cart rentals,
-              massages, yoga and much more
+            <p className="max-w-[850px] font-[400] text-[max(15px,min(2vw,20px))] text-center ">
+            Looking for an exciting adventure? Want to relax and rejuvenate? Need help with cleaning or childcare? No matter what you're looking for, Nosara Booking Center has what you need.
             </p>
           </div>
         </div>

@@ -4,6 +4,10 @@ import { Skeleton } from "@/components/Skeletons/CatalogueSkeleton";
 import { ServiceYouNeed } from "@/components/ServiceYouNeed";
 import { AnotherService } from "@/components/AnotherService";
 
+export const metadata = {
+  title: 'Services',
+}
+
 export default function page() {
   return (
     <main className="mb-36">
@@ -13,7 +17,9 @@ export default function page() {
             Services
           </h1>
           <p className="w-full max-w-3xl mx-auto text-center font-[400] text-xl sm:text-base">
-           Discover your next experience 
+            On our site you can discover and book exciting services to enjoy
+              your stay in Nosara such as ATV tours, golf cart rentals,
+              massages, yoga and much more
           </p>
         </div>
         <Suspense fallback={<Skeleton />}>

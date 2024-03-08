@@ -2,6 +2,10 @@ import { Form } from "@/components/ContactUs/Form";
 import { BiLogoGmail } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io";
 
+export const metadata = {
+  title: 'Contact us',
+}
+
 export default function page() {
   return (
     <main className="mb-28">

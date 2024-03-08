@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { DynamicIcon } from "../DynamicIcon";
 import { client } from "@/libs/contenful";
-import { Example } from "../Example";
 
 async function getData() {
   try {

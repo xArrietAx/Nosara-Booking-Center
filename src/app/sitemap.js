@@ -17,18 +17,6 @@ export default function sitemap() {
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.5,
-      },
-      {
-        url: 'https://www.nosarabookingcenter.com/Shopping_service',
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.5,
-      },
-      {
-        url: 'https://www.nosarabookingcenter.com/Canopy_tour',
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.5,
-      },
+      }
     ]
   }

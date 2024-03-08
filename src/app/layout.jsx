@@ -9,8 +9,35 @@ import "./globals.css";
 const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"], display:"swap" });
 
 export const metadata = {
-  title: "Nosara Booking Center",
-  description: "On our site you can discover and book exciting services to enjoy your stay in Nosara such as ATV tours, golf cart rentals, massages, yoga and much more",
+  title: {
+    template: '%s | Nosara Booking Center',
+    default: 'Nosara Booking Center',
+  },
+  description: "Looking for an exciting adventure? Want to relax and rejuvenate? Need help with cleaning or childcare? No matter what you're looking for, Nosara Booking Center has what you need.",
+  creator: 'Arrieta Family',
+  url: 'https://www.nosarabookingcenter.com/',
+  siteName: 'Nosara Booking Center',
+  keywords: [
+    "Nosara Booking Center",
+    "Reserva de servicios en Nosara",
+    "Tours y actividades en Nosara",
+    "Alquiler de carritos de golf en Nosara",
+    "Servicio de transporte en Nosara",
+    "Alquiler de coches en Nosara",
+    "Aventuras en el mar en Nosara",
+    "Niñera en Nosara",
+    "Servicio de limpieza en Nosara",
+    "Chef en Nosara",
+    "Book services in Nosara",
+    "Nosara tours and activities",
+    "Golf cart rentals Nosara",
+    "Shuttle service Nosara",
+    "Car rentals Nosara",
+    "Sea adventures Nosara",
+    "Nanny Nosara",
+    "Cleaning service Nosara",
+    "Chef Nosara"
+]
 };
 
 export default function RootLayout({ children }) {
