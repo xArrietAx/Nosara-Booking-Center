@@ -16,7 +16,7 @@ export default function page() {
           <h1 className="font-[600] font text-center text-[2.5em] sm:text-3xl">
             Services
           </h1>
-          <p className="w-full max-w-3xl mx-auto text-center font-[400] text-xl sm:text-base">
+          <p className="w-full max-w-3xl mx-auto text-center font-[400] text-[max(15px,min(2vw,20px))]">
             On our site you can discover and book exciting services to enjoy
               your stay in Nosara such as ATV tours, golf cart rentals,
               massages, yoga and much more

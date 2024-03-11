@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <main className="mb-36">
       <section className="container">
-        <div className="h-[340px] mt-24 md:h-[400px] md:mt-14">
-          <div className="flex flex-col items-center gap-3">
+        <div className="h-96 mt-20 md:mt-12">
+          <div className="flex flex-col items-center gap-2">
             <h1
               className={`${montserrat.className} text-[max(48px,min(5vw,76px))] text-center`}
             >

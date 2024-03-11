@@ -13,7 +13,7 @@ export const Catalogue = () => {
         </h2>
 
         <p className="font-[400] text-xl sm:text-base" >
-          Variety of activities available
+        Variety of activities at nosara
         </p>
 
       </div>

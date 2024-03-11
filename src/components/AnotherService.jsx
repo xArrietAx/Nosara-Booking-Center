@@ -65,13 +65,13 @@ export const AnotherService = () => {
        <div className="grid grid-cols-2">
        {data.map((ele, i) => {
         return (
-            <div key={i + Date + Math.random()} className="space-y-5" >
+            <div key={i + Date + Math.random()} className="space-y-4" >
               <div className="overflow-hidden">
               <Image className="transition-transform duration-500 hover:scale-110" src={ele.img.src} alt={ele.img.alt} width={ele.img.width} height={ele.img.height} />
               </div>
-              <div className="space-y-1 min-h-[150px] sm:min-h-min">
+              <div className="space-y-2 min-h-[140px] sm:min-h-min">
               <span className="inline-block w-full font-[600] uppercase">{ele.title}</span>
-              <p>{ele.paragraph}</p>
+              <p className="text-[.95em]">{ele.paragraph}</p>
               </div>
               <div className="divider"></div>
               <div className="flex items-center justify-center gap-3">

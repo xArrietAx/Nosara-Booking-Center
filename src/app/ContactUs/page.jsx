@@ -16,7 +16,7 @@ export default function page() {
           <h1 className="font-[600] text-[2.5em] sm:text-3xl lg:text-center">
             Contact us
           </h1>
-          <p className="font-[400] text-xl sm:text-base lg:text-center">
+          <p className="font-[400] text-[max(15px,min(2vw,20px))] lg:text-center">
           Book a variety of additional services, such as childcare, chef and cleaning , which may not be available directly on our website. Contact us for reservations or questions. We are here to help you.
           </p>
           </div>

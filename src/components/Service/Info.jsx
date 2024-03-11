@@ -1,7 +1,7 @@
 import { Book } from "./Book";
-import Image from "next/image";
 import { ServiceYouNeed } from "../ServiceYouNeed";
 import { Copy } from "./Copy";
+import Image from "next/image";
 
 export async function Info({ service, getData }) {
 
@@ -11,15 +11,15 @@ export async function Info({ service, getData }) {
     <section>
       <div className="container flex flex-col gap-5">
         <div className="flex justify-between gap-5">
-          <div className="flex w-full h-5/6 max-h-[600px] rounded-xl overflow-hidden">
-            <Image
-              src={`https:${data?.fields?.image?.fields?.file?.url}`}
-              alt="xd"
-              width={data?.fields?.image?.fields?.file?.details?.image?.width}
-              height={data?.fields?.image?.fields?.file?.details?.image.height}
-              priority
-              className="w-full min-h-full object-cover"
-            />
+          <div className="flex items-center justify-center w-full max-h-[600px] rounded-xl overflow-hidden">
+        <Image
+          src={`https:${data?.fields?.image?.fields?.file?.url}`}
+          alt={`${data?.fields?.image?.fields?.title} image`}
+          width={data?.fields?.image?.fields?.file?.details?.image?.width}
+          height={data?.fields?.image?.fields?.file?.details?.image.height}
+          priority
+          className="w-full min-h-full object-cover"
+        />
           </div>
           <Book firstCard={data?.fields?.data ? data?.fields?.data[0]?.Cards[0]?.Name : ""} />
         </div>
