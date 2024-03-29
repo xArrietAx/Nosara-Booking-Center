@@ -70,8 +70,7 @@ twitter: {
   card: 'summary_large_image',
   title: 'Nosara Booking Center: Book and Discover Better Experiences',
   description: 'Unlock adventure in Nosara! Plan now for thrilling ATV rides, golf cart tours, yoga serenity, catamaran excursions, horseback exploration, and fine dining. Book today!',
-  creator: 'Arrieta Family',
-  images: ['/twitter-image.jpg'],
+  creator: 'Arrieta Family'
 }
 };
 
