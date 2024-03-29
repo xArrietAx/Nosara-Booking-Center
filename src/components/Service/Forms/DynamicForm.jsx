@@ -14,7 +14,7 @@ export function DynamicForm({data, updateFields, serviceName, isFirstStep, curre
     function Form(serviceName) {
        const key = serviceName.replace(/\s+/g, '').toLowerCase()
         switch (key) {
-            case "shuttle": return <ShuttleForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} currentStep={currentStep} />
+            case "privateshuttle": return <ShuttleForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} currentStep={currentStep} />
             case "carrental": return <CarRentalForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
             case "restaurants": return <RestaurantForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
             case "seaadventure": return <SeaAdventuresForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
