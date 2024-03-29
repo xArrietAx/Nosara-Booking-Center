@@ -40,7 +40,7 @@ function Provider({ ele }) {
           {ele.fields.name}
         </span>
           <p className="text">
-          Touch me to see more information.
+          Touch me to see more information
           </p>
       </div>
     </div>
