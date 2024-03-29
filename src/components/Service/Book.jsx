@@ -1,249 +1,141 @@
-"use client";
+"use client"
 
-import { IoMdInformationCircleOutline } from "react-icons/io";
+import { Icon } from "../Icon";
 import { IoClose } from "react-icons/io5";
-import toast from "react-hot-toast";
-import axios from "axios";
 import { useState } from "react";
-import { PhoneInput } from "react-international-phone";
+import { toast } from "react-hot-toast";
+import { Form1 } from "./Forms/Form1";
+import { DynamicForm } from "./Forms/DynamicForm";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import axios from "axios";
 
-export function Book({ firstCard = "" }) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [service, setService] = useState("");
-  const [phone, setPhone] = useState("");
-  const [loading, setLoading] = useState(false);
+const initialData = {
+    Name: "",
+    Phone:"",
+    Email:"",
+    Information:"",
+    Pax:"",
+    PickUp:"",
+    DropOff:"",
+    Vehicle:"",
+    Adults:"",
+    Children:"",
+    Time:"",
+    DepartureTime:"",
+    Day:"",
+    Restaurant:"",
+    Luggages:"",
+    Surfboard:"",
+    ArrivalTime:"",
+    FlighNumber:"",
+    Airline:"",
+    HorseActivity:"",
+    Massage:"",
+    SeaAdventure:"",
+    Yoga:""
+}
 
-  const [open, setOpen] = useState(false);
+export function Book({serviceName}) {
 
-  async function SendEmail() {
-    try {
-      setLoading(true);
-      const res = await axios.post("/sendEmail", {
-        name,
-        email,
-        service,
-        phone,
-      });
-      toast.success(res.data.message);
-    } catch (error) {
-      toast.error(error?.response?.data?.message);
-    } finally {
-      setLoading(false);
-      setName("");
-      setEmail("");
-      setPhone("");
-      setService("");
+    function updateFields(fields) {
+        setData(prev => {
+            return {...prev, ...fields}
+        })
     }
-  }
 
-  return (
-    <>
-      <form
-        className="form_book flex flex-col gap-5 w-full max-w-sm h-fit p-5 border rounded-xl lg:hidden"
-        onSubmit={(e) => {
-          e.preventDefault(), SendEmail();
-        }}
-      >
-        <div className="flex items-center justify-center gap-3">
-          <span className="font-medium text-center text-xl uppercase">
-            Book Now!
-          </span>
-          <div
-            className="tooltip"
-            data-tip={"This is NOT a confirmation of your reservation."}
-          >
-            <IoMdInformationCircleOutline fontSize={"1.1em"} />
-          </div>
-        </div>
+    const [currentStepIndex, setCurrentStepIndex] = useState(0)
+    const [loading, setLoading] = useState(false)
+    const [data, setData] = useState(initialData)
+    
+    const isFirstStep = currentStepIndex === 0
 
-        <div>
-          <label
-            htmlFor="name"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Full name
-          </label>
-          <input
-            type="text"
-            id="name"
-            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-            placeholder="John Fitzgerald Kennedy"
-            required
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-          />
-        </div>
+    const steps = serviceName !== "Shuttle" ? [<Form1 data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} />, <DynamicForm 
+    data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} /> ] : 
+    [<Form1 data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} currentStep={currentStepIndex} />, <DynamicForm 
+    data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} currentStep={currentStepIndex}  />, <DynamicForm 
+    data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} currentStep={currentStepIndex} /> ] 
+    
+    const isLastStep = currentStepIndex === steps.length - 1 
 
-        <div>
-          <label
-            htmlFor="phone"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Phone
-          </label>
-          <div className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full">
-            <PhoneInput
-              defaultCountry="us"
-              value={phone}
-              onChange={(phone) => setPhone(phone)}
-            />
-          </div>
-        </div>
+    const step = steps[currentStepIndex]
+    
+    const [open, setOpen] = useState(false)
+    
+    function next() {
+        setCurrentStepIndex(i => {
+            if (i >= steps.length - 1) return 1
+            return i + 1 
+        })
+    }
 
-        <div>
-          <label
-            htmlFor="email"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-            placeholder="name@gmail.com"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-          />
-        </div>
+    function back() {
+        setCurrentStepIndex(i => {
+            if (i <= 0) return i
+            return i - 1 
+        })
+    }
 
-        <div className="sm:col-span-2">
-          <label
-            htmlFor="service"
-            className="inline-block mb-2 font-[500] text-sm text-center text-gray-900"
-          >
-            Paste here the activity/rent/tour you want to book
-          </label>
+    const filterEmptyFields = (data) => {
+        const filteredData = {};
+        for (const key in data) {
+          if (data[key] !== "") {
+            filteredData[key] = data[key];
+          }
+        }
+        return filteredData;
+    };
 
-          <input
-            type="text"
-            id="service"
-            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-            placeholder={firstCard}
-            required
-            onChange={(e) => setService(e.target.value)}
-            value={service}
-          />
-        </div>
+    async function onSubmit(e) {
+        e.preventDefault()
+        if (!isLastStep) return next()
+        setLoading(true)
+        try {
+            const filteredFormData = filterEmptyFields(data);
+            filteredFormData.ServiceName = serviceName
+            const res = await axios.post("/sendEmail", filteredFormData)
+            toast.success(res?.data?.message);
+        } catch (error) {
+            console.log(error);
+            toast.error(error?.response?.data?.message);
+        } finally {
+            setData({ ...initialData })
+            setLoading(false)
+            setCurrentStepIndex(0)
+        }
+    }
 
-        <button className="btn btn-neutral text-white" disabled={loading}>
-          {loading ? <span className="loading loading-spinner" /> : "Send"}
-        </button>
-      </form>
+    return <>
+    <button className="pulse hidden fixed bottom-5 right-5 btn btn-circle w-14 h-14 bg-green-500 text-white hover:bg-green-600 lg:block" onClick={() => {setOpen(true), document.documentElement.style.overflow = "hidden"}}>Book</button>
+    
+<div className="w-full max-w-sm xl:max-w-xs lg:w-0">
+<div className={`mx-auto w-full sticky top-5 h-fit p-4 border rounded-xl bg-white transition-[transform opacity] duration-500 lg:fixed lg:w-screen lg:max-w-none lg:h-screen lg:top-0 lg:left-0 lg:z-50 lg:rounded-none lg:overflow-y-auto ${open ? "lg:translate-y-0 lg:opacity-1" : "lg:translate-y-[100%] lg:opacity-0"}`}>
+        <span className="inline-block w-full mb-3 font-medium text-lg text-center text-gray-900 uppercase lg:text-xl lg:mb-5" >Book now!</span>
+        <Icon className={"absolute top-3 p-1 hidden lg:block"} onClick={() => {setOpen(false), document.documentElement.style.overflow = "visible"}}>
+            <IoClose fontSize={"25px"} />
+        </Icon>
+        <form onSubmit={onSubmit}>
 
-      <button
-        className="btn btn-circle fixed bottom-5 right-5 hidden w-14 h-14 border text-white bg-green-500 shadow hover:bg-green-600 lg:block"
-        onClick={() => {
-          setOpen(true), (document.documentElement.style.overflowY = "hidden");
-        }}
-      >
-        Book
-      </button>
+            {step}
+            {isLastStep && <button className="btn btn-neutral w-full mb-3" disabled={loading}> <span className={loading ? "loading loading-spinner" : "hidden" } /> Send</button>} 
 
-      <div
-        className={`hidden fixed top-0 left-0 z-50 items-center justify-center w-screen h-screen bg-[#00000073] transition-[visibility opacity] duration-700 lg:flex ${
-          open ? "opacity-100" : "invisible opacity-0"
-        }`}
-      >
-        <form
-          className={`flex flex-col gap-3 w-full max-w-md p-5 rounded-xl mx-2 bg-white transition-transform duration-700
-      ${open ? "translate-y-0" : "translate-y-[200%]"}`}
-          onSubmit={(e) => {
-            e.preventDefault(), SendEmail();
-          }}
-        >
-          <div className="relative w-full  mb-3">
-            <span className="inline-block w-full font-[600] text-center text-xl">
-              Book now!
-            </span>
-            <IoClose
-              className="absolute top-0 left-0 cursor-pointer"
-              fontSize={"26px"}
-              onClick={() => {
-                setOpen(false),
-                  (document.documentElement.style.overflowY = "auto");
-              }}
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="name"
-              className="block mb-2 text-sm font-medium text-gray-900"
-            >
-              Full name
-            </label>
-            <input
-              type="text"
-              id="name"
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-              placeholder="John Fitzgerald Kennedy"
-              required
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-            />
-          </div>
-
-          <div>
-          <label
-            htmlFor="phone"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Phone
-          </label>
-          <div className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full">
-            <PhoneInput
-              defaultCountry="us"
-              value={phone}
-              onChange={(phone) => setPhone(phone)}
-            />
-          </div>
-        </div>
-
-          <div>
-            <label
-              htmlFor="email"
-              className="block mb-2 text-sm font-medium text-gray-900"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-              placeholder="name@gmail.com"
-              required
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-          </div>
-
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="service"
-              className="inline-block mb-2 font-[500] text-sm text-center text-gray-900"
-            >
-              Paste here the activity/rent/tour you want to book
-            </label>
-
-            <input
-              type="text"
-              id="service"
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-              placeholder={firstCard}
-              required
-              onChange={(e) => setService(e.target.value)}
-              value={service}
-            />
-          </div>
-
-          <button className="btn btn-neutral text-white" disabled={loading}>
-            {loading ? <span className="loading loading-spinner" /> : "Send"}
-          </button>
+         <div className="flex items-center justify-end gap-5">
+            {
+                !isFirstStep && <button type="button" onClick={back}>
+                <Icon className={"p-2"}>
+            <IoIosArrowBack fontSize={"22px"} />
+                </Icon>
+            </button>
+            }
+            {!isLastStep && <button>
+                <Icon className={"p-2"}>
+            <IoIosArrowForward fontSize={"22px"} />
+                </Icon>
+            </button>}
+           
+         </div>
+            
         </form>
-      </div>
+    </div>
+</div>
     </>
-  );
 }

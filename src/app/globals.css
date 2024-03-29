@@ -19,7 +19,7 @@ p{
 }
 
 .container{
-    width: 95%;
+    width: 93%;
     max-width: 1480px;
     margin: 0 auto;
 }
@@ -32,7 +32,7 @@ p{
 
 .grid_services{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 2em;
 }
 
@@ -66,6 +66,34 @@ p{
         @apply max-w-xs
     }    
 }
+
+
+
+
+
+
+  
+  .pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Card */
@@ -159,14 +187,34 @@ p{
 }
 
 
-.react-international-phone-input-container .react-international-phone-input {
-    height: 42px;
-    border: none;
+.react-international-phone-input {
+    width: 100%;
+    height: 45px;
     font-size: 0.875rem;
     background-color: rgba(83, 69, 69, 0);
-    @apply text-gray-900
+    @apply text-gray-900 
 }
 
 .react-international-phone-country-selector-button {
-    height: 42px;
+    height: 45px;
+    padding: 10px;
 }
+
+
+
+
+
+
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #22c55e;
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+      }
+  }

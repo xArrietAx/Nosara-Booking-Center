@@ -3,7 +3,7 @@ import { createTransport } from "nodemailer";
 
 export async function POST(req) {
   try {
-    const { email, message = "", name, subject = "Reserva de", service = "", phone = "none", list = false } = await req.json();
+    const body = await req.json();
 
     let transport = await createTransport({
       host: "smtp.hostinger.com",
@@ -15,34 +15,44 @@ export async function POST(req) {
       },
     });
 
-    const ContentEmail = `
-    <h1>${name}</h1>
-    
+    const ContentBookEmail = `
+    <h1>${body.Name} quiere reservar ${body.ServiceName}</h1>
+    <p>Email del cliente: ${body.Email}</p>
+    <p>Numero del cliente: ${body.Phone}</p>
+    ${body.Information ? `
     <br />
-
-    <h2>${subject + " " + service}</h2>
+    <h2>Comentarios</h2>  
+    <p>${body.Information}</p>`: ''
+  }
     <br />
+    <h2>Detalles de la reserva:</h2>
+    <ul>
+    ${Object.keys(body).map(key => {
+      if (body[key]) {
+        return `<li>${key}: ${body[key]}</li>`;
+      } else {
+        return '';
+      }
+    }).join('')}
+  </ul>
+`;
 
-    ${message}
-
+const ContentContactUsEmail = `
+    <h1>${body.Name}</h1>
+    <p>Email del cliente: ${body.Email}</p>
     <br />
-    <br />
-
-    
-    <p>Email del cliente: ${email}</p>
-    <p>Numero del cliente: ${phone}</p>
-    
-    `;
+    <p>${body.Message}</p>
+`;
 
     await transport.sendMail(
       {
         from: {
-          name:name,
+          name:body.Name,
           address: process.env.EMAIL_USER
         },
         to: process.env.EMAIL_USER,
-        subject: subject || "",
-        html: list ? list : ContentEmail ,
+        subject: body.ContactUs ? body.Subject : body.ServiceName,
+        html: body.ContactUs ? ContentContactUsEmail : ContentBookEmail
       })
 
       return NextResponse.json({

@@ -16,6 +16,7 @@ async function getData(service) {
 }
 
 export async function generateMetadata({ params }) {
+
   const data = await getData(params.service);
 
   return {
@@ -28,8 +29,22 @@ export async function generateMetadata({ params }) {
       "NBC",
       "nbc",
       `${data.fields.name} in Guiones`,
+      "Booking Nosara"
     ],
-    url: `/Service/${params.service}`,
+    openGraph:{
+      title: data.fields.name,
+      description: data.fields.description,
+      url: `/Service/${params.service}`,
+      siteName:"Nosara Booking Center",
+      images:[
+        {
+          url:`https:${data?.fields?.image?.fields?.file?.url}`,
+          width:"1920",
+          height:"1280"
+        }
+      ],
+      type:"website"
+    },
   };
 }
 

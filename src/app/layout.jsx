@@ -14,6 +14,10 @@ export const metadata = {
     default: 'Nosara Booking Center',
   },
   description: "Looking for an exciting adventure? Want to relax and rejuvenate? Need help with cleaning or childcare? No matter what you're looking for, Nosara Booking Center has what you need.",
+  metadataBase: new URL('https://www.nosarabookingcenter.com'),
+  alternates: {
+    canonical: '/',
+  },
   creator: 'Arrieta Family',
   url: 'https://www.nosarabookingcenter.com/',
   siteName: 'Nosara Booking Center',
@@ -45,8 +49,22 @@ robots: {
   googleBot: {
     index: true,
     follow: true,
-    noimageindex: true,
-  },
+    noimageindex: true
+  }
+},
+openGraph: {
+  title: 'Nosara Booking Center',
+  description: "Looking for an exciting adventure? Want to relax and rejuvenate? Need help with cleaning or childcare? No matter what you're looking for, Nosara Booking Center has what you need.",
+  images:[
+    {
+      url:`'/opengraph-image.jpg'`,
+      width:"1200",
+      height:"800"
+    }
+  ],
+  url: 'www.nosarabookingcenter.com/',
+  siteName:"Nosara Booking Center",
+  type:"website"
 },
 };
 

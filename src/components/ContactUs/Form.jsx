@@ -15,10 +15,11 @@ export function Form() {
     try {
       setLoading(true);
       const res = await axios.post("/sendEmail", {
-        name,
-        email,
-        subject,
-        message,
+        Name: name,
+        Email: email,
+        Subject: subject,
+        Message: message,
+        ContactUs: true
       });
       toast.success(res.data.message);
     } catch (error) {
@@ -50,7 +51,7 @@ export function Form() {
           type="text"
           id="name"
           className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-          placeholder="John Fitzgerald Kennedy"
+          placeholder="John"
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -102,6 +103,7 @@ export function Form() {
           rows="6"
           className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
           placeholder="Leave a message..."
+          required
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
@@ -111,7 +113,7 @@ export function Form() {
         className="btn btn-neutral w-44 text-white sm:w-full"
         disabled={loading}
       >
-        {loading ? <span className="loading loading-spinner" /> : "Send"}
+        <span className={loading ? "loading loading-spinner" : "hidden" } /> Send
       </button>
 
     </form>

@@ -70,12 +70,12 @@ export const AnotherService = () => {
               <Image className="transition-transform duration-500 hover:scale-110" src={ele.img.src} alt={ele.img.alt} width={ele.img.width} height={ele.img.height} />
               </div>
               <div className="space-y-2 min-h-[140px] sm:min-h-min">
-              <span className="inline-block w-full font-[600] uppercase">{ele.title}</span>
-              <p className="text-[.95em]">{ele.paragraph}</p>
+              <span className="inline-block w-full font-[600] text-[17px] uppercase">{ele.title}</span>
+              <p>{ele.paragraph}</p>
               </div>
               <div className="divider"></div>
               <div className="flex items-center justify-center gap-3">
-              <Link href={ele.href} className="link link-success">Details</Link>
+              <Link href={ele.href} className="link link-success">contact</Link>
               <FiExternalLink />
               </div>
             </div>
