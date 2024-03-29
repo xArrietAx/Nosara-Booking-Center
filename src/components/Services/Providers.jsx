@@ -30,6 +30,7 @@ export const Providers = async () => {
 
 function Provider({ ele }) {
   return (
+        <Link href={{ pathname: `/Service/${ele.sys.id}` }}>
     <div className="h-[273px]">
       <div className="card">
         <div className="icon">
@@ -38,12 +39,11 @@ function Provider({ ele }) {
         <span className="title">
           {ele.fields.name}
         </span>
-        <Link href={{ pathname: `/Service/${ele.sys.id}` }}>
           <p className="text">
           Touch me to see more information.
           </p>
-        </Link>
       </div>
     </div>
+        </Link>
   );
 }
