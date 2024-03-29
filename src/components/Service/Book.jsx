@@ -49,10 +49,9 @@ export function Book({serviceName}) {
     
     const isFirstStep = currentStepIndex === 0
 
-    const steps = serviceName !== "Shuttle" ? [<Form1 data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} />, <DynamicForm 
-    data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} /> ] : 
-    [<Form1 data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} currentStep={currentStepIndex} />, <DynamicForm 
-    data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} currentStep={currentStepIndex}  />, <DynamicForm 
+    const steps = serviceName !== "Shuttle" ? [<Form1 key={Date + Math.random()} data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} />, <DynamicForm key={Date + Math.random()} data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} /> ] : 
+    [<Form1 key={Date + Math.random()} data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} currentStep={currentStepIndex} />, <DynamicForm
+    key={Date + Math.random()} data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} currentStep={currentStepIndex}  />, <DynamicForm key={Date + Math.random()} 
     data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} currentStep={currentStepIndex} /> ] 
     
     const isLastStep = currentStepIndex === steps.length - 1 

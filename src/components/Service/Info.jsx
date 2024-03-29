@@ -88,7 +88,7 @@ className="w-full h-full rounded-xl object-cover"
   })}
 </div> : <div className="flex flex-col items-center justify-center gap-3 w-full">
 <span className="font-[600] text-lg text-center uppercase">Coming soon</span>
-<span  className="text-center">Don't worry if you don't see content to rent, you can also book {data?.fields?.name} using the form</span>
+<span className="text-center">Do not worry if you do not see content to rent, you can also book {data?.fields?.name} using the form</span>
 </div>
 }
 
