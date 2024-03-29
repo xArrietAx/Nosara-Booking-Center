@@ -32,15 +32,15 @@ export async function generateMetadata({ params }) {
       "Booking Nosara"
     ],
     openGraph:{
-      title: data.fields.name,
-      description: data.fields.description,
+      title: data.fields.ogTitle,
+      description: data.fields.ogDescription,
       url: `/Service/${params.service}`,
       siteName:"Nosara Booking Center",
       images:[
         {
           url:`https:${data?.fields?.image?.fields?.file?.url}`,
-          width:"1920",
-          height:"1280"
+          width:"1200",
+          height:"630"
         }
       ],
       type:"website"

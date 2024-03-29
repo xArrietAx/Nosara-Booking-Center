@@ -189,7 +189,6 @@ p{
 
 .react-international-phone-input {
     width: 100%;
-    height: 45px;
     font-size: 0.875rem;
     background-color: rgba(83, 69, 69, 0);
     @apply text-gray-900 

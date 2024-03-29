@@ -46,7 +46,7 @@ export function Book({serviceName}) {
     const [currentStepIndex, setCurrentStepIndex] = useState(0)
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState(initialData)
-    
+
     const isFirstStep = currentStepIndex === 0
 
     const steps = serviceName !== "Shuttle" ? [<Form1 key={24332} data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} />, <DynamicForm key={45345} data={data} updateFields={updateFields} serviceName={serviceName} isFirstStep={isFirstStep} /> ] : 

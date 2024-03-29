@@ -2,6 +2,7 @@ import { ServiceYouNeed } from "../ServiceYouNeed";
 import { Copy } from "./Copy";
 import Image from "next/image";
 import { Book } from "./Book";
+import { Example } from "../Example";
 
 export async function Info({ service, getData }) {
 

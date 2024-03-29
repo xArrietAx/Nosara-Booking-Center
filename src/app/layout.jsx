@@ -13,7 +13,7 @@ export const metadata = {
     template: '%s | Nosara Booking Center',
     default: 'Nosara Booking Center',
   },
-  description: "Looking for an exciting adventure? Want to relax and rejuvenate? Need help with cleaning or childcare? No matter what you're looking for, Nosara Booking Center has what you need.",
+  description: "Your gateway to adventure in Nosara starts here! Plan your trip now and discover a world of exciting experiences. From exploring mountain trails by ATV to touring Nosara in golf carts, we have everything you need to make your visit unforgettable. Plus, immerse yourself in the serenity of yoga, experience the thrill of catamaran excursions, explore the mountains on horseback, and indulge your taste buds at the area's finest restaurants. Book today and start planning an unforgettable trip to Nosara.",
   metadataBase: new URL('https://www.nosarabookingcenter.com'),
   alternates: {
     canonical: '/',
@@ -53,13 +53,13 @@ robots: {
   }
 },
 openGraph: {
-  title: 'Nosara Booking Center',
-  description: "Looking for an exciting adventure? Want to relax and rejuvenate? Need help with cleaning or childcare? No matter what you're looking for, Nosara Booking Center has what you need.",
+  title: 'Nosara Booking Center: Book Now and Discover the Best Experiences ',
+  description: "Your gateway to adventure in Nosara starts here! Plan your trip now and discover a world of exciting experiences. From exploring mountain trails by ATV to touring Nosara in golf carts, we have everything you need to make your visit unforgettable. Plus, immerse yourself in the serenity of yoga, experience the thrill of catamaran excursions, explore the mountains on horseback, and indulge your taste buds at the area's finest restaurants. Book today and start planning an unforgettable trip to Nosara.",
   images:[
     {
-      url:`'/opengraph-image.jpg'`,
+      url: "/opengraph-image.jpg",
       width:"1200",
-      height:"800"
+      height:"630"
     }
   ],
   url: 'www.nosarabookingcenter.com/',
