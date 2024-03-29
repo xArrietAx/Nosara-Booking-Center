@@ -45,6 +45,13 @@ export async function generateMetadata({ params }) {
       ],
       type:"website"
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: data.fields.ogTitle,
+      description: data.fields.ogDescription,
+      creator: 'Arrieta Family',
+      images: [`https:${data?.fields?.image?.fields?.file?.url}`],
+    }
   };
 }
 
