@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
       siteName:"Nosara Booking Center",
       images:[
         {
-          url:`https:${data?.fields?.image?.fields?.file?.url}`,
+          url:`https:${data?.fields?.ogImage?.fields?.file?.url}`,
           width:"1200",
           height:"630"
         }
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
       title: data.fields.ogTitle,
       description: data.fields.ogDescription,
       creator: 'Arrieta Family',
-      images: [`https:${data?.fields?.image?.fields?.file?.url}`],
+      images: [`https:${data?.fields?.ogImage?.fields?.file?.url}`],
     }
   };
 }
