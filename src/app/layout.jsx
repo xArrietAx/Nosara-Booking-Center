@@ -53,7 +53,7 @@ robots: {
   }
 },
 openGraph: {
-  title: 'Nosara Booking Center: Book Now and Discover the Best Experiences ',
+  title: 'Nosara Booking Center: Book and Discover Better Experiences',
   description: "Your gateway to adventure in Nosara starts here! Plan your trip now and discover a world of exciting experiences. From exploring mountain trails by ATV to touring Nosara in golf carts, we have everything you need to make your visit unforgettable. Plus, immerse yourself in the serenity of yoga, experience the thrill of catamaran excursions, explore the mountains on horseback, and indulge your taste buds at the area's finest restaurants. Book today and start planning an unforgettable trip to Nosara.",
   images:[
     {
@@ -65,6 +65,13 @@ openGraph: {
   url: 'www.nosarabookingcenter.com/',
   siteName:"Nosara Booking Center",
   type:"website"
+},
+twitter: {
+  card: 'summary_large_image',
+  title: 'Nosara Booking Center: Book and Discover Better Experiences',
+  description: 'Unlock adventure in Nosara! Plan now for thrilling ATV rides, golf cart tours, yoga serenity, catamaran excursions, horseback exploration, and fine dining. Book today!',
+  creator: 'Arrieta Family',
+  images: "/twitter-image.jpg"
 },
 };
 
