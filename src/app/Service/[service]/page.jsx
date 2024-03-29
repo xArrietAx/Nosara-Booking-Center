@@ -50,7 +50,11 @@ export async function generateMetadata({ params }) {
       title: data.fields.ogTitle,
       description: data.fields.ogDescription,
       creator: 'Arrieta Family',
-      images: [`https:${data?.fields?.ogImage?.fields?.file?.url}`],
+      images: [{
+        url:`https:${data?.fields?.ogImage?.fields?.file?.url}`,
+        width:"1200",
+        height:"630"
+      }],
     }
   };
 }
