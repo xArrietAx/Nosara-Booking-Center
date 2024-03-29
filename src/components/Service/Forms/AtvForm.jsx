@@ -8,7 +8,7 @@ export function AtvForm({ Vehicle, PickUp, DropOff, Information, updateFields, i
               ATV or Tour
             </label>
             <input type="text" name="atv" id="atv" placeholder="Coffe tour" min="0" className="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-3 text-sm outline-none focus:border-[#121213] focus:shadow-md" required value={Vehicle} onChange={(e) => updateFields({ Vehicle: e.target.value })} />
-            <span className="inline-block mt-2 text-[14px] font-medium text-gray-500">If you need an ATV, just mention 'ATV' and we will provide you with prices by mail, as the ones shown may be reserved.</span>
+            <span className="inline-block mt-2 text-[14px] font-medium text-gray-500">If you need an ATV, just mention ATV and we will provide you with prices by mail, as the ones shown may be reserved.</span>
           </div>
         </>
       )}
