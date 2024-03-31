@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Toaster } from 'react-hot-toast';
@@ -84,6 +85,22 @@ twitter: {
 export default function RootLayout({ children }) {
   return (
     <html className={poppins.className} lang="en">
+      <head>
+      {/* Google tag (gtag.js) */}
+<Script async src="https://www.googletagmanager.com/gtag/js?id=G-3V5FR4CW10"></Script>
+<Script id="google-analytics">
+  {
+   `
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments)}
+   gtag('js', new Date());
+ 
+   gtag('config', 'G-3V5FR4CW10');
+   `
+  }
+</Script>
+
+      </head>
       <body>
           <ContextProvider>
           <Header />
