@@ -87,17 +87,15 @@ export default function RootLayout({ children }) {
     <html className={poppins.className} lang="en">
       <head>
       {/* Google tag (gtag.js) */}
-<Script async src="https://www.googletagmanager.com/gtag/js?id=G-3V5FR4CW10"></Script>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-CF7S1DCT2D"></Script>
 <Script id="google-analytics">
-  {
-   `
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments)}
-   gtag('js', new Date());
- 
-   gtag('config', 'G-3V5FR4CW10');
-   `
-  }
+{`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CF7S1DCT2D');
+`}
 </Script>
 
       </head>
