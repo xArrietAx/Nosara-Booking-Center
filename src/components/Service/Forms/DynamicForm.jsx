@@ -20,7 +20,7 @@ export function DynamicForm({data, updateFields, serviceName, isFirstStep, curre
             case "seaadventure": return <SeaAdventuresForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
             case "atv": return <AtvForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
             case "golfcart": return <GolfCartForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
-            case "zipline": return <ZipLineForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
+            case "canopy": return <ZipLineForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
             case "massage": return <MassageForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
             case "yoga": return <YogaForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
             case "horsetour": return <HorseTourForm {...data} updateFields={updateFields} isFirstStep={isFirstStep} />
