@@ -3,13 +3,13 @@ import { SearchBarPc } from "@/components/SearchBarFormPc/SearchBarPc";
 import { BgGlassmorphism } from "@/Shared/BgGlassmorphism";
 import { Heading } from "@/Shared/Headings/Heading";
 import { StayCard } from "@/components/StayCard";
+import { TourCard } from "@/components/TourCard";
+import { Form } from "@/components/home/Form";
+import { FaArrowRight } from "@/utils/Icons";
 import supabase from "@/utils/Supabase";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import { TourCard } from "@/components/TourCard";
-import { FaArrowRight } from "@/utils/Icons";
-import { Form } from "@/components/home/Form";
 
 const Carrousel = dynamic(() => import("@/components/Carrousel"), {
   ssr: false,
