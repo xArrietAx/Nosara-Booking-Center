@@ -1,6 +1,6 @@
 "use client"
 
-import { Context } from "@/context/useContext";
+import { Context } from "@/Context/useContext";
 import { useSubmit } from "@/hooks/useSubmit";
 import { useContext, useEffect } from "react";
 import { Button } from "@/Shared/Button";

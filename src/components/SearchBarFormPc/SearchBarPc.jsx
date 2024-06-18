@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useContext, useEffect } from "react";
-import { Context } from "@/context/useContext";
+import { Context } from "@/Context/useContext";
 import { useRouter } from "next/navigation";
 import { GolfCart } from "./Forms/GolfCart";
 import { Shuttle } from "./Forms/Shuttle";
