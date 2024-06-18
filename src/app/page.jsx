@@ -9,7 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { TourCard } from "@/components/TourCard";
 import { FaArrowRight } from "@/utils/Icons";
-import { Button } from "@/Shared/Button";
 import { Form } from "@/components/home/Form";
 
 const Carrousel = dynamic(() => import("@/components/Carrousel"), {
@@ -234,8 +233,6 @@ async function ExploreTours() {
 
 async function FeaturedPlaces() {
   const { data, error } = await getData("House", 0, 1);
-
-  console.log(data);
 
   return (
     <section id="stays">
