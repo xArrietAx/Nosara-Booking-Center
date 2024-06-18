@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { InputPhone } from "../InputPhone";
-import { Context } from "@/Context/useContext";
+import { Context } from "@/context/useContext";
 import { Button } from "@/Shared/Button";
 import { useSubmit } from "@/hooks/useSubmit";
 

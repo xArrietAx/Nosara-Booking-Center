@@ -1,5 +1,5 @@
 import { filterEmptyValues } from "@/utils/filterEmptyValues";
-import { Context } from "@/Context/useContext";
+import { Context } from "@/context/useContext";
 import { useState, useContext } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";

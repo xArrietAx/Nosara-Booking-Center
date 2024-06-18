@@ -2,7 +2,7 @@
 
 import { DatePickerHeaderTwoMonth } from "../DatePickerHeaderTwoMonth";
 import { MdCalendarToday } from "@/utils/Icons";
-import { Context } from "@/Context/useContext";
+import { Context } from "@/context/useContext";
 import { ButtonInput } from "./ButtonInput";
 import DatePicker from "react-datepicker";
 import { PopOver } from "../PopOver";

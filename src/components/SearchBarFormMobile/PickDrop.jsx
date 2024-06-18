@@ -1,7 +1,7 @@
 "use client";
 
 import { DatePickerHeaderTwoMonth } from "../DatePickerHeaderTwoMonth";
-import { Context } from "@/Context/useContext";
+import { Context } from "@/context/useContext";
 import DatePicker from "react-datepicker";
 import React, { useContext } from "react";
 

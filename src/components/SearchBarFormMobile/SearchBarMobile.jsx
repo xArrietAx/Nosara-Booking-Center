@@ -3,7 +3,7 @@
 import { Fragment, useContext, useState, useEffect } from "react"
 import { useParams, useRouter } from "next/navigation";
 import { IoSearchOutline } from "@/utils/Icons";
-import { Context } from "@/Context/useContext";
+import { Context } from "@/context/useContext";
 import { DialogPanel } from "../DialogPanel";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { GolfCart } from "./Forms/GolfCart";

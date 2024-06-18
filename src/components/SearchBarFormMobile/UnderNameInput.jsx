@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "@/Context/useContext";
+import { Context } from "@/context/useContext";
 
 export function UnderNameInput() {
 
