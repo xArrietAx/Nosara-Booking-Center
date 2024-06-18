@@ -1,6 +1,6 @@
 "use client";
 
-import { Context } from "@/context/useContext";
+import { Context } from "@/Context/useContext";
 import { useSubmit } from "@/hooks/useSubmit";
 import emailTypes from "@/config/emailTypes";
 import { InputPhone } from "../InputPhone";

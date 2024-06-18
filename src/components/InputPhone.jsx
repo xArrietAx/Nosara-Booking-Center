@@ -1,4 +1,4 @@
-import { Context } from "@/context/useContext";
+import { Context } from "@/Context/useContext";
 import { useState, useRef, useEffect, useContext } from "react";
 import { PhoneInput } from 'react-international-phone';
 
