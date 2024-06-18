@@ -1,0 +1,48 @@
+.input_container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .input_label {
+   @apply text-sm font-medium text-gray-700
+  }  
+  
+  .input_field {
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 16px;
+    border-radius: 9px;
+    outline: none;
+    background-color: #F2F2F2;
+    border: 1px solid #e5e5e500;
+    @apply transition-all duration-300
+  }
+  
+  .input_field.no-focus-style:focus {
+    border: none;
+    box-shadow: none;
+    background-color: #F2F2F2;
+  }
+
+  .input_field:focus {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px 2px #242424;
+    background-color: transparent;
+  }  
+
+
+  
+
+  .react-international-phone-input-container .react-international-phone-input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+  }
+
+  .react-international-phone-country-selector-button {
+    border: none;
+    background-color: transparent;
+  }

@@ -1,112 +1,127 @@
+import { ContextProvider } from "@/context/useContext";
+import "react-international-phone/style.css";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Toaster } from 'react-hot-toast';
-import { ContextProvider } from "@/Context/useContext";
-import 'react-international-phone/style.css';
+import { Footer } from "@/Shared/Footer";
+import { Header } from "@/Shared/Header";
+import "@/styles/ReactDatePicker.css";
+import '@splidejs/react-splide/css';
+import Script from "next/script";
+import "@/styles/Form.css";
 import "./globals.css";
 
 const poppins = Poppins({ weight: ["400", "500", "600", "700"], subsets: ["latin"], display:"swap" });
 
 export const metadata = {
-  title: {
-    template: '%s | Nosara Booking Center',
-    default: 'Nosara Booking Center',
-  },
-  description: "Your gateway to adventure in Nosara starts here! Plan your trip now and discover a world of exciting experiences. From exploring mountain trails by ATV to touring Nosara in golf carts, we have everything you need to make your visit unforgettable. Plus, immerse yourself in the serenity of yoga, experience the thrill of catamaran excursions, explore the mountains on horseback, and indulge your taste buds at the area's finest restaurants. Book today and start planning an unforgettable trip to Nosara.",
+  
   metadataBase: new URL('https://www.nosarabookingcenter.com'),
-  alternates: {
-    canonical: '/',
+
+  title: {
+    default: 'Nosara Booking Center | Vacation rentals, tours & shuttle',
+    template: '%s | Nosara Booking Center'
   },
-  creator: 'Arrieta Family',
-  url: 'https://www.nosarabookingcenter.com/',
-  siteName: 'Nosara Booking Center',
+  
+  description: "We accompany you on a trip full of experiences in Nosara. We offer houses, shuttles, ATV rentals, golf cart rentals, and more in Nosara. Enjoy the best of Nosara with our services.",
+  
   keywords: [
-    "Nosara Booking Center",
-    "Reserva de servicios en Nosara",
-    "Tours y actividades en Nosara",
-    "Alquiler de carritos de golf en Nosara",
-    "Servicio de transporte en Nosara",
-    "Alquiler de coches en Nosara",
-    "Aventuras en el mar en Nosara",
-    "Niñera en Nosara",
-    "Servicio de limpieza en Nosara",
-    "Chef en Nosara",
-    "Book services in Nosara",
-    "Nosara tours and activities",
-    "Golf cart rentals Nosara",
-    "Shuttle service Nosara",
-    "Car rentals Nosara",
-    "Sea adventures Nosara",
-    "Nanny Nosara",
-    "Cleaning service Nosara",
-    "Chef Nosara"
-],
-robots: {
-  index: true,
-  follow: true,
-  nocache: true,
-  googleBot: {
+  "Nosara vacation home rentals",
+  "Nosara holiday home reservations",
+  "Nosara vacation rentals",
+  "ATV rentals Nosara",
+  "All-terrain vehicle rentals Nosara",,
+  "Nosara shuttle service",
+  "Nosara private transportation",
+  "Nosara car rentals",
+  "Nosara auto rentals",
+  "Nosara vehicle rentals",
+  "Nosara golf cart rentals",
+  "Nosara golf buggy rentals",
+  "Adventure tours Nosara",
+  "ATV excursions Nosara",
+  "Nosara shuttle transfers"
+  ],
+  
+  openGraph: {
+    title: 'Nosara Booking Center | Vacation rentals, tours & shuttle',
+    description: "We accompany you on a trip full of experiences in Nosara. We offer houses, shuttles, ATV rentals, golf cart rentals, and more in Nosara. Enjoy the best of Nosara with our services.",
+    images:[
+      {
+        url:"/opengraph-image.png",
+        alt:"Nosara Booking Center | Vacation rentals, tours & shuttle",
+        width:"1200",
+        height:"630",
+      }
+    ],
+    url: 'www.nosarabookingcenter.com/',
+    siteName:"Nosara Booking Center",
+    type:"website"
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nosara Booking Center | Vacation rentals, tours & shuttle',
+    description: 'Accompanying us, you have a trip full of experiences. With houses, shuttles, ATV rental, golf carts rental and much more',
+    images:[
+      {
+        url:"/twitter-image.png",
+        alt:"Nosara Booking Center | Vacation rentals, tours & shuttle",
+        width:"1200",
+        height:"630"
+      }
+    ],
+    creator: 'Andrés Arrieta',
+    url: 'www.nosarabookingcenter.com/',
+    siteName:"Nosara Booking Center",
+    type:"website",
+  },
+
+  robots: {
     index: true,
     follow: true,
-    noimageindex: true
-  }
-},
-openGraph: {
-  title: 'Nosara Booking Center: Book and Discover Better Experiences',
-  description: "Your gateway to adventure in Nosara starts here! Plan your trip now and discover a world of exciting experiences. From exploring mountain trails by ATV to touring Nosara in golf carts, we have everything you need to make your visit unforgettable. Plus, immerse yourself in the serenity of yoga, experience the thrill of catamaran excursions, explore the mountains on horseback, and indulge your taste buds at the area's finest restaurants. Book today and start planning an unforgettable trip to Nosara.",
-  images:[
-    {
-      url: "/opengraph-image.jpg",
-      width:"1200",
-      height:"630"
-    }
-  ],
-  url: 'www.nosarabookingcenter.com/',
-  siteName:"Nosara Booking Center",
-  type:"website"
-},
-twitter: {
-  card: 'summary_large_image',
-  title: 'Nosara Booking Center: Book and Discover Better Experiences',
-  description: 'Unlock adventure in Nosara! Plan now for thrilling ATV rides, golf cart tours, yoga serenity, catamaran excursions, horseback exploration, and fine dining. Book today!',
-  creator: 'Arrieta Family',
-  images:[
-    {
-      url: "/twitter-image.jpg",
-      width:"1200",
-      height:"630"
-    }
-  ],
-}
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-image-preview': 'large',
+    },
+  },
+
+  siteName: 'Nosara Booking Center',
+  creator: 'Andrés Arrieta',
+  url: 'https://www.nosarabookingcenter.com/',
+  category: 'Vacations',
+
 };
 
 export default function RootLayout({ children }) {
   return (
     <html className={poppins.className} lang="en">
-      <head>
+          <head>
       {/* Google tag (gtag.js) */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-CF7S1DCT2D"></Script>
-<Script id="google-analytics">
-{`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)}
-  gtag('js', new Date());
+    <Script id="google-analytics">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js', new Date());
 
-  gtag('config', 'G-CF7S1DCT2D');
-`}
-</Script>
+      gtag('config', 'G-CF7S1DCT2D');
+    `}
+    </Script>
 
       </head>
       <body>
-          <ContextProvider>
+        <ContextProvider>
           <Header />
           {children}
           <Footer />
           <Toaster />
-          </ContextProvider>
+        </ContextProvider>
       </body>
     </html>
   );
 }
+
+
+// NO TOCAR HASTA HACER SEO

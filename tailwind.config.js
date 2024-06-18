@@ -1,30 +1,44 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-     
-    },
-
     screens: {
-      'xs': {'max': '320px'},
-      'sm': {'max': '640px'},
-      'md': {'max': '767px'},
-      'lg': {'max': '1023px'},
-      'xl': {'max': '1279px'},
-      '2xl': {'max': '1535px'},
-    }
-
+      'xs': '520px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
+    container: {
+      center:true,
+      padding:{
+        DEFAULT: '1rem',
+        '2xl': '8rem',
+      }
+    },
   },
-  
   plugins: [require("daisyui")],
 
   daisyui: {
-    themes: ["light"]
-  },
+    themes: [
+      {
+        mytheme: {
+          "primary": "#22c55e",
+          "secondary": "#f6d860",
+          "accent": "#37cdbe",
+          "neutral": "#3d4451",
+          "base-100": "#ffffff",
+        },
+      }
+    ],
+  }
+}
 
-};

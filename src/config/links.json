@@ -1,0 +1,23 @@
+{
+    "Home": "/",
+
+    "About": "/About",
+
+    "Contact": "/Contact",
+
+    "VacationRentals": "/Vacation-rentals",
+
+    "Tours": "/Tours",
+
+    "PrivacyPolicy": "/Privacy_policy",
+
+    "TermsAndConditions": "/Terms_&_conditions",
+
+    "AtvRental": "/Service/ATV",
+
+    "ShuttleRental": "/Service/Shuttle",
+
+    "GolfCartRental": "/Service/GolfCart",
+
+    "CarRental": "/Service/Car"
+}
