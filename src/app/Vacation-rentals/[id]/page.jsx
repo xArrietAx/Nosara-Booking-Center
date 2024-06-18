@@ -1,4 +1,4 @@
-import { FiUser, IoLocationOutline, LiaBathSolid, LiaBedSolid, LiaDoorOpenSolid } from "@/utils/Icons";
+import { FiUser, IoLocationOutline, LiaBathSolid, LiaBedSolid, LiaDoorOpenSolid, MdOutlineNightlight } from "@/utils/Icons";
 import { ModalAmenities } from "@/components/Vacation-rentals/ModalAmenities";
 import { ImageGrid } from "@/components/Vacation-rentals/ImageGrid";
 import { BookForm } from "@/components/Vacation-rentals/BookForm";
@@ -67,7 +67,7 @@ export default async function ListingStayDetail({params}) {
     return notFound()
   }
   
-  const { name, information, location, price, beds, bedrooms, baths, maxGuests } = data[0]
+  const { name, information, location, price, beds, bedrooms, baths, maxGuests, minNights } = data[0]
 
   const renderSection1 = () => {
     return (
@@ -92,32 +92,62 @@ export default async function ListingStayDetail({params}) {
 
         <div className="w-full border-b border-gray-100" />
 
-        <div className="space-x-8 flex items-center justify-between py-4 text-sm text-gray-700 overflow-hidden overflow-x-auto min-[310px]:py-0 xl:justify-start xl:space-x-12">
-          <div className="flex items-center space-x-3 ">
+        <div className="overflow-hidden">
+          <div className="flex gap-5 overflow-x-auto" id="hidden_scrollbar">
+
+          <div className="flex items-center flex-grow space-x-3">
             <FiUser fontSize={25} />
+            <div className="space-x-2 flex">
             <span>
-              {maxGuests} <span className="hidden xs:inline-block">guests</span>
+              {maxGuests}
             </span>
+            <span className="hidden xs:inline-block">guests</span>
+            </div>
           </div>
-          <div className="flex items-center space-x-3">
-            <LiaBedSolid fontSize={25} />
+
+          <div className="flex items-center flex-grow space-x-3">
+          <LiaBedSolid fontSize={25} />
+            <div className="space-x-2 flex">
             <span>
-              {beds} <span className="hidden xs:inline-block">beds</span>
+              {beds}
             </span>
+            <span className="hidden xs:inline-block">beds</span>
+            </div>
           </div>
-          <div className="flex items-center space-x-3">
-            <LiaBathSolid fontSize={25} />
+
+          <div className="flex items-center flex-grow space-x-3">
+          <LiaBathSolid fontSize={25} />
+            <div className="space-x-2 flex">
             <span>
-              {baths} <span className="hidden xs:inline-block">baths</span>
+              {baths}
             </span>
+            <span className="hidden xs:inline-block">baths</span>
+            </div>
           </div>
-          <div className="flex items-center space-x-3">
-            <LiaDoorOpenSolid fontSize={25} />
+
+          <div className="flex items-center flex-grow space-x-3">
+          <LiaDoorOpenSolid fontSize={25} />
+          <div className="space-x-2 flex">
             <span>
-              {bedrooms} <span className="hidden xs:inline-block">bedrooms</span>
+              {bedrooms}
             </span>
+            <span className="hidden xs:inline-block">bedrooms</span>
+          </div>
+          </div>
+
+          {minNights && <div className="flex items-center flex-grow space-x-3">
+            <MdOutlineNightlight fontSize={25} />
+            <div className="space-x-2 flex xs:w-[115px]">
+            <span>
+              {minNights}
+            </span>
+            <span className="hidden xs:inline-block">min nights</span>
+            </div>
+          </div>}
+
           </div>
         </div>
+
       </div>
     );
   };

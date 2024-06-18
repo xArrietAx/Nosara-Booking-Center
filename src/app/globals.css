@@ -25,15 +25,7 @@ html {
 	background-color: #cccccc;
 }
 
-.hidden-scrollbar::-webkit-scrollbar-track {
-  display: none;
-}
-
-.hidden-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.hidden-scrollbar::-webkit-scrollbar-thumb {
+#hidden_scrollbar::-webkit-scrollbar {
   display: none;
 }
 

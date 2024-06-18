@@ -6,6 +6,7 @@ import { Disclosure } from "@headlessui/react";
 import link from "@/config/links.json";
 import { Logo } from "@/Shared/Logo";
 import Link from "next/link";
+import { FooterBar } from "../FooterBar";
 
 export function NavMobile({ onClickClose }) {
 
@@ -132,9 +133,14 @@ export function NavMobile({ onClickClose }) {
           </div>
         </span>
       </div>
+      <div>
       <ul className="flex flex-col py-6 px-2 space-y-1">
         {data.map(_renderItem)}
       </ul>
+        <div className="flex justify-center mt-3">
+          <span>Hola! 😄</span>
+        </div>
+      </div>
     </div>
   );
 };
