@@ -137,7 +137,7 @@ export default async function ListingStayDetail({params}) {
 
           {minNights && <div className="flex items-center flex-grow space-x-3">
             <MdOutlineNightlight fontSize={25} />
-            <div className="space-x-2 flex xs:w-[115px]">
+            <div className="space-x-2 flex xs:w-[150px]">
             <span>
               {minNights}
             </span>
