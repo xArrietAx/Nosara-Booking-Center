@@ -141,7 +141,7 @@ export default async function ListingStayDetail({params}) {
             <span>
               {minNights}
             </span>
-            <span className="hidden xs:inline-block">min nights</span>
+            <span className="hidden xs:inline-block">minimum nights</span>
             </div>
           </div>}
 
