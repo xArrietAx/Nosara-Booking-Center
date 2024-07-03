@@ -4,10 +4,10 @@ export const SocialsList = ({className = "lg:flex-col lg:items-start lg:gap-5"})
 
     const socials = [
       { name: "Facebook", icon: <MdFacebook />, href: "https://www.facebook.com/profile.php?id=61557653082047" },
-      { name: "WhatsApp", icon: <MdWhatsapp />, href: "https://wa.me/50686012266?text=Hello, Nosara Booking Center. I need..." },
+      { name: "WhatsApp", icon: <MdWhatsapp />, href: "https://wa.me/50686012266?text=Hello Nosara Booking Center." },
       { name: "Email", icon: <MdOutlineEmail />, href: "mailto:nbc@nosarabookingcenter.com" },
     ];
-  
+
     const renderItem = (item, index) => {
       return (
         <a

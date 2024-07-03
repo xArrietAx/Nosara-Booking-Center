@@ -67,7 +67,7 @@ export default async function ListingStayDetail({params}) {
     return notFound()
   }
   
-  const { name, information, location, price, beds, bedrooms, baths, maxGuests, minNights } = data[0]
+  const { name, information, location, price, beds, bedrooms, baths, maxGuests, minNights, avg } = data[0]
 
   const renderSection1 = () => {
     return (
@@ -77,11 +77,14 @@ export default async function ListingStayDetail({params}) {
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
           {name}
         </h1>
-        <span className="text-xl font-semibold md:text-3xl lg:hidden">
+        <span className="relative text-xl font-semibold md:text-3xl lg:hidden">
               ${price}
               <span className="ml-1 text-base font-normal text-gray-500">
                 /night
               </span>
+              {avg && <span className="absolute -bottom-5 left-0 text-sm">
+                Average
+              </span>}
             </span>
         </div>
 
@@ -183,7 +186,7 @@ export default async function ListingStayDetail({params}) {
             <ModalAmenities amenities={data[0].amenities?.amenities} />
             {renderSection3()}
           </div>
-          <SideBar price={price} name={name} />
+          <SideBar price={price} name={name} avg={avg} />
         </div>
       </main>
       <Mansory data={data[0].galleryImages} />
