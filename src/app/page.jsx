@@ -79,22 +79,28 @@ function Hero() {
 }
 
 function WhyChooseUs() {
+
   const data = [
     {
-      title: "Professional Experience",
+      title: "🏡 Our commission is only 5% from room rate",
       description:
-        "With years of experience in customer service, you can trust us to handle your inquiries with professionalism and speed.",
+        "At Nosara Booking Center, we only charge a 5% commission on the room rate. This means more profit for you!",
     },
     {
-      title: "Guaranteed Response Time",
+      title: "📅 Check-in and check-out included (no extra charge!)",
       description:
-        "We promise to respond to your inquiries in record time. Your time is valuable, and we respect it.",
+        "Check-in and check-out services are included at no extra charge. We take care of welcoming your guests and ensuring their stay is perfect.",
     },
     {
-      title: "Efficient Problem Solving",
+      title: "📣 Marketing of your property",
       description:
-        "Our priority is to solve your problems as efficiently as possible. We put all our effort in finding quick solutions.",
+        "We handle the marketing of your property to ensure its visibility and attract more guests. We use effective strategies to make your property stand out.",
     },
+    {
+      title: "👥 Customer service",
+      description:
+        "We offer exceptional customer service, available to address all the questions and needs of your guests, ensuring an unparalleled accommodation experience.",
+    }
   ];
 
   return (
