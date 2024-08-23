@@ -1,7 +1,9 @@
+const theme = require("./src/config/theme.json");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+      "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
  
@@ -9,6 +11,26 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+
+      colors: {
+        text: theme.colors.text,
+
+        dark: theme.colors.dark,
+
+        primary: theme.colors.primary,
+        
+        secondary: theme.colors.secondary,
+        
+        border: theme.colors.border,
+      },
+
+      transitionDuration: {
+        duration: "300ms"
+      }
+
+    },
+    
     screens: {
       'xs': '520px',
       'sm': '640px',
@@ -17,6 +39,7 @@ module.exports = {
       'xl': '1280px',
       '2xl': '1536px',
     },
+
     container: {
       center:true,
       padding:{
@@ -25,20 +48,5 @@ module.exports = {
       }
     },
   },
-  plugins: [require("daisyui")],
-
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          "primary": "#22c55e",
-          "secondary": "#f6d860",
-          "accent": "#37cdbe",
-          "neutral": "#3d4451",
-          "base-100": "#ffffff",
-        },
-      }
-    ],
-  }
-}
-
+  plugins: [],
+};

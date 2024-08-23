@@ -1,0 +1,55 @@
+{
+  "Hero": {
+    "title": "Maximise the Visibility of your Property",
+    "desc": "We focus on raising awareness of your property, getting direct bookings and keeping it fully occupied, with a 5% commission on the room rate.",
+    "btn": "I'm interested",
+    "image": {
+      "src": "/PropertyMarketingHero.webp",
+      "width": 640,
+      "height": 659.8,
+      "alt": "Property Marketing image"
+    }
+  },
+
+  "Services": {
+  "title": "Services for Your Property",
+  "desc": "Boost guest satisfaction and your property's success with our key services.",
+  "data": [
+    {
+      "title": "Concierge",
+      "desc": "Assistance to improve your guests' experience",
+      "image": {
+        "src": "/Offer/Concierge.webp",
+        "width": 250,
+        "heigth": 141,
+        "alt": "Concierge"
+      }
+    },
+    {
+      "title": "Marketing of your property",
+      "desc": "Marketing your property to increase visibility and bookings",
+      "image": {
+        "src": "/Offer/Marketing.webp",
+        "width": 250,
+        "heigth": 134,
+        "alt": "Marketing"
+      }
+    },
+    {
+      "title": "Check in & check out",
+      "desc": "Management of guest arrivals and departures. Only in Nosara areas",
+      "image": {
+        "src": "/Offer/CheckIn&CheckOut.webp",
+        "width": 250,
+        "heigth": 167,
+        "alt": "Check - in & Check - out"
+      }
+    }
+  ]    
+  },
+
+  "Contact": {
+    "title": "Get in touch",
+    "desc": "Interested in our marketing services? Get in touch for more information."
+  }
+}

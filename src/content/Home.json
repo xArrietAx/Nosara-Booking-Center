@@ -1,0 +1,54 @@
+{
+
+    "Hero":{
+        "title":"Houses, tours & shuttles in Nosara",
+        "desc":"We accompany you on a trip full of experiences in Nosara. We offer houses, shuttles, ATV rentals, golf cart rentals, and more in Nosara. Enjoy the best of Nosara with our services.",
+        "btn":"Search your stay",
+        "image": {
+            "src":"/HeroHome.webp",
+            "width": 640,
+            "height": 659.8,
+            "alt":"Home image"
+        }
+    },
+
+    "Featured":{
+        "title":"Featured places to stay",
+        "desc":"Popular places to stay that Chisfis recommends for you"
+    },
+
+    "Why":{
+        "title":"Why choose us",
+        "id":"Benefits",
+        "image": {
+            "src":"/our-features.webp",
+            "width": 768,
+            "height": 669,
+            "alt":"Why choose us image"
+        },
+        "data": [
+            {
+                "title": "Local Expertise",
+                "desc":
+                  "Our local knowledge provides valuable insights and recommendations, helping you maximize your experience."
+              },
+              {
+                "title": "Ease of Use",
+                "desc":
+                  "Our website and booking processes are designed to be intuitive and user-friendly"
+              },
+              {
+                "title": "Responsive Service",
+                "desc":
+                  "We address your inquiries and requests quickly, ensuring you feel supported throughout your experience."
+              }
+        ]
+    },
+
+    "Explore":{
+        "title":"Explore and book",
+        "desc":"Variety of tours of our area, from ATV tours to whale and dolphin watching.",
+        "link":"Discover tours"
+    }
+    
+}

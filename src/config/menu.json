@@ -1,0 +1,216 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Contact us",
+      "url": "/Contact"
+    },
+    {
+      "name": "Vacation rentals",
+      "url": "/Vacation_rentals"
+    },
+    {
+      "name": "Tours",
+      "url": "/Tours"
+    },
+    {
+      "name": "Services",
+        "url": "",
+        "hasChildren": true,
+        "children": [
+          {
+            "name": "Property management",
+            "url": "/Property_management"
+          },
+          {
+            "name":"Property marketing",
+            "url":"/Property_marketing"
+          }
+        ]
+    },
+    {
+      "name": "Rentals",
+        "url": "",
+        "hasChildren": true,
+        "children": [
+          {
+              "name": "ATV",
+              "url": "/Service/ATV"
+            },
+          {
+            "name": "Shuttle",
+            "url": "/Service/Shuttle"
+          },
+              {
+                "name": "Golf cart",
+                "url": "/Service/Golf_cart"
+              },
+              {
+                "name": "Car",
+                "url": "/Service/Car"
+              }
+        ]
+    }
+  ],
+
+  "mobile": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/About"
+    },
+    {
+      "name": "Contact us",
+      "url": "/Contact"
+    },
+    {
+      "name": "Vacation rentals",
+      "url": "/Vacation_rentals"
+    },
+    {
+      "name": "Tours",
+      "url": "/Tours"
+    },
+    {
+      "name": "Services",
+        "url": "",
+        "hasChildren": true,
+        "children": [
+          {
+            "name": "Property management",
+            "url": "/Property_management"
+          },
+          {
+            "name":"Property marketing",
+            "url":"/Property_marketing"
+          }
+        ]
+    },
+    {
+      "name": "Rentals",
+        "url": "",
+        "hasChildren": true,
+        "children": [
+          {
+              "name": "ATV",
+              "url": "/Service/ATV"
+            },
+          {
+            "name": "Shuttle",
+            "url": "/Service/Shuttle"
+          },
+              {
+                "name": "Golf cart",
+                "url": "/Service/Golf_cart"
+              },
+              {
+                "name": "Car",
+                "url": "/Service/Car"
+              }
+        ]
+    }
+  ],
+
+
+  "footer": [
+    {
+      "id": "5",
+      "title": "Pages",
+      "menus": [
+        {
+          "name": "Home",
+          "url": "/"
+        },
+        {
+          "name": "About",
+          "url": "/About"
+        },
+        {
+          "name": "Contact us",
+          "url": "/Contact"
+        },
+        {
+          "name": "Vacation rentals",
+          "url": "/Vacation_rentals"
+        },
+        {
+          "name": "Tours",
+          "url": "/Tours"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Rental",
+      "menus": [
+        {
+          "name": "Shuttle",
+          "url": "/Service/Shuttle"
+        },
+        {
+          "name": "ATV",
+          "url": "/Service/ATV"
+        },
+        {
+          "name": "Golf cart",
+          "url": "/Service/Golf_cart"
+        },
+        {
+          "name": "Car",
+          "url": "/Service/Car"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Services",
+      "menus": [
+        {
+          "name": "Property management",
+          "url": "/Property_management"
+        },
+        {
+          "name":"Property marketing",
+          "url":"/Property_marketing"
+        }
+      ]
+    }
+  ],
+
+  "footerCopyright": [
+    {
+      "name": "Privacy & Policy",
+      "url": "/privacy-policy"
+    },
+    {
+      "name": "Terms of Service",
+      "url": "/terms-services"
+    }
+  ],
+
+
+
+  
+
+  "ExampleDropdownMenu": {
+    "name": "Pages",
+    "url": "",
+    "hasChildren": true,
+    "children": [
+      {
+        "name": "Acerca de nosotros",
+        "url": "/about"
+      },
+      {
+        "name": "Contacto",
+        "url": "/contact"
+      }
+    ]
+  }
+}

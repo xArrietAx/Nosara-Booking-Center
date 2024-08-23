@@ -1,0 +1,56 @@
+{
+  "PageHeader":{
+    "title":"Book your"
+  },
+
+  "Suggestion": {
+    "title": "Suggestions for you",
+    "desc":"Discover and enjoy Nosara to the maximum",
+    "data": [
+      {
+        "title": "ATV",
+        "desc": "Adventure and adrenaline in Nosara",
+        "url": "/Service/ATV",
+        "image": {
+          "src": "/ATV.webp",
+          "width": 450,
+          "height": 500,
+          "alt": "ATV"
+        }
+      },
+      {
+        "title": "Golf cart",
+        "desc": "Explore Nosara with ease",
+        "url":"/Service/Golf_cart",
+        "image": {
+          "src": "/GolfCart.webp",
+          "width": 450,
+          "height": 500,
+          "alt": "Golf cart"
+        }
+      },
+      {
+        "title": "Car",
+        "desc": "Freedom to discover Nosara.",
+        "url": "/Service/Car",
+        "image": {
+          "src": "/Car.webp",
+          "width": 450,
+          "height": 500,
+          "alt": "Car"
+        }
+      },
+      {
+        "title": "Shuttle",
+        "desc": "Convenient transfers around Nosara.",
+        "url": "/Service/Shuttle",
+        "image": {
+          "src": "/Shuttle.webp",
+          "width": 450,
+          "height": 500,
+          "alt": "Shuttle"
+        }
+      }
+    ]
+  }
+}

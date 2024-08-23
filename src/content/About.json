@@ -1,0 +1,86 @@
+{
+  "Hero": {
+    "title": "👋 About Us",
+    "desc": "At Nosara Booking Center, we focus on providing tourists with a complete and convenient experience during their visit to Nosara, Costa Rica. Since our launch in 2024, we simplify travel planning by offering various booking services in one place, such as stays, tours, ATV rentals, golf cart rentals, car rentals and shuttle service.",
+    "image": {
+      "src": "/about-hero-right.webp",
+      "width": 736,
+      "height": 600,
+      "alt": "About image"
+    }
+  },
+
+  "Service": {
+    "title": "Our service",
+    "desc": "Popular places to stay and popular tours for fun",
+    "data": [
+      {
+        "title": "Tours",
+        "desc": "Discover exciting adventures",
+        "img": "/ATV.webp",
+        "width": 420,
+        "height": 220
+      },
+      {
+        "title": "Vacation rentals",
+        "desc": "Find your ideal vacation rental",
+        "img": "/Stay.webp",
+        "width": 420,
+        "height": 220
+      },
+      {
+        "title": "Shuttle",
+        "desc": "Travel with ease and tranquility",
+        "img": "/Shuttle.webp",
+        "width": 420,
+        "height": 220
+      },
+      {
+        "title": "Property marketing",
+        "desc": "Maximize your property's visibility",
+        "img": "/PropertyMarketing.webp",
+        "width": 420,
+        "height": 220
+      },
+      {
+        "title": "Rentals",
+        "desc": "Rent with confidence and ease",
+        "img": "/GolfCart.webp",
+        "width": 420,
+        "height": 220
+      },
+      {
+        "title": "Property management",
+        "desc": "Reliable and efficient property care",
+        "img": "/PropertyManagement.webp",
+        "width": 420,
+        "height": 220
+      }
+    ]
+  },
+
+  "Promise": {
+    "title": "Our promise",
+    "id": "Promise",
+    "image": {
+      "src": "/About-service-right.webp",
+      "width": 736,
+      "height": 600,
+      "alt": "Promise image"
+    },
+    "data": [
+      {
+        "title": "Convenience",
+        "desc": "We offer you the convenience of booking all your tourist services in one place, from accommodation to activities."
+      },
+      {
+        "title": "Quality Guaranteed",
+        "desc": "We work with trusted local providers to offer you authentic and high-quality experiences."
+      },
+      {
+        "title": "Personalized Attention",
+        "desc": "Our team is committed to providing personalized assistance and local recommendations to enhance your experience in Nosara."
+      }
+    ]
+  }
+}

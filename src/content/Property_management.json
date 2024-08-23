@@ -1,0 +1,153 @@
+{
+
+    "Hero":{
+        "title":"We Manage Your Nosara Property",
+        "desc":"Property Management for Your Nosara Home, Providing Expert Oversight, Routine Maintenance, and Personalized Support to Maximize Your Property’s Potential and Rental Income",
+        "btn":"I'm interested",
+        "image": {
+            "src":"/PropertyManagementHero.webp",
+            "width": 640,
+            "height": 659.8,
+            "alt":"Property Management image"
+        }
+    },
+
+    "Mission":{
+        "title":"Our mission",
+        "desc":"Can you imagine arriving at your Nosara holiday home and finding it spotless, ready to enjoy? With us, that's reality. We take care of every detail, from cleaning to guest service, so that all you have to worry about is relaxing. Contact us and let's talk about your project!",
+        "btn":"About us",
+        "image": {
+            "src":"/OurMission.png",
+            "width": 1200,
+            "height": 700,
+            "alt":"About image"
+        }
+    },
+
+    "Offer":{
+        "title":"What we offer",
+        "desc":"Services we provide for the complete and effective management of your property",
+        "data":[
+            {
+                "name":"House services",
+                "data": [
+                    {
+                        "title":"Cleaning",
+                        "desc":"Full cleaning to keep your property impeccable",
+                        "image": {
+                            "src":"/Offer/Cleaning.webp",
+                            "width":250,
+                            "heigth":167,
+                            "alt":"Cleaning"
+                        }
+                    },
+                    {
+                        "title":"Maintenance Services",
+                        "desc":"General maintenance to ensure the good condition of your property",
+                        "image": {
+                            "src":"/Offer/Maintenance.webp",
+                            "width":250,
+                            "heigth":167,
+                            "alt":"General maintenance"
+                        }
+                    },
+                    {
+                        "title":"Pool Maintenance",
+                        "desc":"Professional care to keep your pool in perfect condition",
+                        "image": {
+                            "src":"/Offer/PoolMaintenance.webp",
+                            "width":250,
+                            "heigth":141,
+                            "alt":"Pool maintenance"
+                        }
+                    },
+                    {
+                        "title":"Garden Maintenance",
+                        "desc":"Garden maintenance for an evergreen and well-kept environment",
+                        "image": {
+                            "src":"/Offer/GardenMaintenance.webp",
+                            "width":250,
+                            "heigth":167,
+                            "alt":"Garden maintenance"
+                        }
+                    },
+                    {
+                        "title":"Laundry",
+                        "desc":"Reliable laundry service for impeccable linen and textiles",
+                        "image": {
+                            "src":"/Offer/Laundry.webp",
+                            "width":160,
+                            "heigth":107,
+                            "alt":"Laundry"
+                        }
+                    }
+                ]
+            },
+            {
+                "name":"Bookings",
+                "data": [
+                    {
+                        "title":"Concierge",
+                        "desc":"Assistance to improve your guests' experience",
+                        "image": {
+                            "src":"/Offer/Concierge.webp",
+                            "width":250,
+                            "heigth":141,
+                            "alt":"Concierge"
+                        }
+                    },
+                    {
+                        "title":"Marketing of your property",
+                        "desc":"Marketing your property to increase visibility and bookings",
+                        "image": {
+                            "src":"/Offer/Marketing.webp",
+                            "width":250,
+                            "heigth":134,
+                            "alt":"Marketing"
+                        }
+                    },
+                    {
+                        "title":"Check in & check out",
+                        "desc":"Efficient management of guest arrivals and departures",
+                        "image": {
+                            "src":"/Offer/CheckIn&CheckOut.webp",
+                            "width":250,
+                            "heigth":167,
+                            "alt":"Check - in & Check - out"
+                        }
+                    }
+                ]
+            },
+            {
+                "name":"Management",
+                "data": [
+                    {
+                        "title":"Municipal Payments",
+                        "desc":"Management and payment of municipal taxes",
+                        "image": {
+                            "src":"/Offer/MunicipalPayments.webp",
+                            "width":250,
+                            "heigth":167,
+                            "alt":"Municipal payments"
+                        }
+                    },
+                    {
+                        "title":"Utility Payments",
+                        "desc":"Payment for services like water, electricity, internet, etc",
+                        "image": {
+                            "src":"/Offer/UtilityPayments.webp",
+                            "width":250,
+                            "heigth":167,
+                            "alt":"Utility payments"
+                        }
+                    }
+                ] 
+            }
+        ]
+    },
+
+    "Contact":{
+        "title":"Get in touch",
+        "desc":"Interested in our management services? Get in touch for more information."
+    }
+}

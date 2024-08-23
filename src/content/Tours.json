@@ -1,0 +1,18 @@
+{
+    "Hero":{
+        "title": "Discover best experiences in Nosara",
+        "location": "Costa Rica",
+        "category": "Tours",
+        "image": {
+            "src":"/Hero-Tours.webp",
+            "width": 600,
+            "height": 600,
+            "alt":"Images of tours"
+        }
+    },
+
+    "Tours":{
+        "title":"Great variety of tours",
+        "desc":"Discover populars tours to enjoy Nosara"
+    }
+}

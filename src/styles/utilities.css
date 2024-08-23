@@ -1,0 +1,40 @@
+.bg-hover {
+    @apply p-1 rounded-md transition-all duration-duration;
+
+    &:hover {
+        @apply bg-secondary cursor-pointer
+    }
+}
+
+.heading{
+    @apply font-semibold text-dark text-3xl md:text-4xl
+  }
+  
+  .body {
+    @apply block mt-2 text-base sm:text-lg md:mt-3 
+  }
+  
+  .heading2{
+    @apply mt-4 font-semibold text-xl text-dark
+  }
+  
+  .body2 {
+    @apply block mt-2
+  }
+  
+  .hero_title{
+    @apply font-medium text-5xl text-dark !leading-[114%] max-[355px]:text-4xl md:text-6xl xl:text-7xl
+  }
+
+  .card_grid{
+    @apply grid gap-5 grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+
+.listingSection__wrap {
+  @apply w-full flex flex-col sm:rounded-2xl border-b sm:border-t sm:border-l sm:border-r border-border space-y-6 sm:space-y-8 pb-10 px-0 sm:p-4 xl:p-8;
+}

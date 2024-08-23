@@ -1,0 +1,18 @@
+{
+
+  "PageHeader":{
+    "title":"Contact"
+  },
+
+  "data": [
+    {
+      "title": "💌 EMAIL",
+      "info": "nbc@nosarabookingcenter.com"
+    },
+    {
+      "title": "☎ PHONE",
+      "info": "+506 8601 2266"
+    }
+  ],
+  "Socials": {"title":"🌏 SOCIALS"}
+}

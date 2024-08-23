@@ -1,6 +1,7 @@
-import { Context } from "@/Context/useContext";
 import { useState, useRef, useEffect, useContext } from "react";
 import { PhoneInput } from 'react-international-phone';
+import { Context } from "@/Context/useBookingContext";
+import { Badge } from "./Badge";
 
 export function InputPhone() {
 
@@ -22,12 +23,12 @@ export function InputPhone() {
         };
       }, []);
 
-    return  <div className="input_container">
-    <label htmlFor="phone" className="input_label">
-      Phone <div className="badge badge-primary text-white">optional</div>
+    return  <div className="space-y-2">
+    <label htmlFor="phone" className="form-label">
+      Phone <Badge>Optional</Badge>
     </label>
     <div onClick={() => setFocus(true)} ref={containerRef} >
-    <PhoneInput defaultCountry="us" className={`input_field !pl-1 ${focus ? "!border-transparent !bg-transparent shadow-[0px_0px_0px_2px_#242424]" : ""}`} inputProps={{id:"phone", name:"Phone"}} value={phone} onChange={value => setPhone(value)} />
+    <PhoneInput defaultCountry="us" className={`!pl-1 py-1 border rounded-lg text-dark ${focus ? "border-primary/70 ring ring-opacity-20 ring-primary" : ""}`} inputProps={{id:"phone", name:"phone"}} value={phone} onChange={value => setPhone(value)} />
     </div>
   </div>
 }

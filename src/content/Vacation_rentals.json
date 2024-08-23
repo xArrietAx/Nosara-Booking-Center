@@ -1,0 +1,17 @@
+{
+    "Hero":{
+        "title": "Discover best stays in Nosara",
+        "location": "Costa Rica",
+        "category": "Houses",
+        "image": {
+            "src":"/Hero-Stays.webp",
+            "width": 600,
+            "height": 600,
+            "alt":"Images of houses"
+        }
+    },
+    "Stays":{
+        "title":"Stays in Nosara",
+        "desc":"Discover populars house to stay in Nosara"
+    }
+}

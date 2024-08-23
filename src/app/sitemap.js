@@ -1,39 +1,23 @@
-import supabase from "@/utils/Supabase"
-
-async function getTours() {
-    const { data } = await supabase.from('Tours').select("*")
-
-    const tours = data
-
-    return {tours}
-}
-
-async function getHouses() {
-    const { data } = await supabase.from('House').select("*")
-
-    const houses = data
-
-    return {houses}
-}
+import { getHouses, getTours } from "@/services"
 
 export default async function sitemap() {
 
-    const { tours } = await getTours()
+    const tours = await getTours()
 
-    const { houses } = await getHouses()
+    const houses = await getHouses()
 
-    const Tours = tours.map((item, i) => {
+    const Tours = tours.data.map(item => {
         return {
-            url: `https://nosarabookingcenter.com/Tours/${item.id}`,
+            url: `https://nosarabookingcenter.com/Tours/${item.name}/${item.id}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.3,   
         }
     })
 
-    const Houses = houses.map((item, i) => {
+    const Houses = houses.data.map(item => {
         return {
-            url: `https://nosarabookingcenter.com/Vacation-rentals/${item.id}`,
+            url: `https://nosarabookingcenter.com/Vacation_rentals/${item.name}/${item.id}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.3,   
@@ -60,13 +44,25 @@ export default async function sitemap() {
             priority: 0.3,
         },
         {
-            url: 'https://nosarabookingcenter.com/Vacation-rentals',
+            url: 'https://nosarabookingcenter.com/Vacation_rentals',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
             url: 'https://nosarabookingcenter.com/Tours',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: 'https://nosarabookingcenter.com/Property_management',
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: 'https://nosarabookingcenter.com/Property_marketing',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,
@@ -84,7 +80,7 @@ export default async function sitemap() {
             priority: 0.3,
         },
         {
-            url: 'https://nosarabookingcenter.com/Service/GolfCart',
+            url: 'https://nosarabookingcenter.com/Service/Golf_cart',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
@@ -99,6 +95,3 @@ export default async function sitemap() {
         ...Tours
     ];
 }
-
-
-
