@@ -2,7 +2,7 @@ import { IoClose, MdKeyboardArrowDown } from "@/icons/index";
 import { SocialsList } from "@/components/SocialList";
 import { Disclosure } from "@headlessui/react";
 import menu from "@/config/menu.json";
-import { Logo } from "@/Shared/Logo";
+import { Logo } from "@/shared/Logo";
 import Link from "next/link";
 
 export function NavMobile({ onClickClose }) {
