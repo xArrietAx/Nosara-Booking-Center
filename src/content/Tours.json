@@ -4,9 +4,9 @@
         "location": "Costa Rica",
         "category": "Tours",
         "image": {
-            "src":"/Hero-Tours.webp",
+            "src":"/ToursHero.webp",
             "width": 600,
-            "height": 600,
+            "height": 618,
             "alt":"Images of tours"
         }
     },

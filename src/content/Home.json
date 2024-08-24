@@ -5,10 +5,10 @@
         "desc":"We accompany you on a trip full of experiences in Nosara. We offer houses, shuttles, ATV rentals, golf cart rentals, and more in Nosara. Enjoy the best of Nosara with our services.",
         "btn":"Search your stay",
         "image": {
-            "src":"/HeroHome.webp",
+            "src":"/HomeHero.webp",
             "width": 640,
             "height": 659.8,
-            "alt":"Home image"
+            "alt":"Houses, tours & shuttles in Nosara"
         }
     },
 
@@ -18,30 +18,27 @@
     },
 
     "Why":{
-        "title":"Why choose us",
-        "id":"Benefits",
+        "title":"Why Nosara",
+        "id":"adventure",
         "image": {
-            "src":"/our-features.webp",
+            "src":"/HomeWhy.webp",
             "width": 768,
             "height": 669,
-            "alt":"Why choose us image"
+            "alt":"Why choose us"
         },
         "data": [
             {
-                "title": "Local Expertise",
-                "desc":
-                  "Our local knowledge provides valuable insights and recommendations, helping you maximize your experience."
-              },
-              {
-                "title": "Ease of Use",
-                "desc":
-                  "Our website and booking processes are designed to be intuitive and user-friendly"
-              },
-              {
-                "title": "Responsive Service",
-                "desc":
-                  "We address your inquiries and requests quickly, ensuring you feel supported throughout your experience."
-              }
+                "title": "Natural Beauty",
+                "desc": "Nosara is surrounded by lush jungles and pristine beaches, offering breathtaking views and opportunities for outdoor activities like surfing and hiking."
+            },
+            {
+                "title": "Tranquility",
+                "desc": "Escape the hustle and bustle of city life and immerse yourself in Nosara's peaceful and laid-back atmosphere, perfect for relaxation and rejuvenation."
+            },
+            {
+                "title": "Rich Culture",
+                "desc": "Experience the local culture through Nosara's vibrant community, yoga retreats, and delicious Costa Rican cuisine."
+            }
         ]
     },
 

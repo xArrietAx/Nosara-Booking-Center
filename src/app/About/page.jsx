@@ -26,7 +26,7 @@ export default function AboutPage() {
 function Hero() {
   return (
     <section>
-      <div className="space-y-14 relative flex flex-col items-center pt-10 lg:pt-28 text-center lg:flex-row lg:space-y-0 lg:space-x-10 lg:text-left">
+      <div className="space-y-14 relative flex flex-col pt-10 lg:pt-28 text-center lg:flex-row lg:space-y-0 lg:space-x-10 lg:text-left lg:items-center">
         <div className="w-screen max-w-full lg:max-w-md xl:max-w-xl space-y-5 lg:space-y-7">
           <h1 className="heading lg:text-5xl">{About.Hero.title}</h1>
           <p className="body">{About.Hero.desc}</p>

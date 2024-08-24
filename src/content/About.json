@@ -3,9 +3,9 @@
     "title": "👋 About Us",
     "desc": "At Nosara Booking Center, we focus on providing tourists with a complete and convenient experience during their visit to Nosara, Costa Rica. Since our launch in 2024, we simplify travel planning by offering various booking services in one place, such as stays, tours, ATV rentals, golf cart rentals, car rentals and shuttle service.",
     "image": {
-      "src": "/about-hero-right.webp",
+      "src": "/AboutHero.webp",
       "width": 736,
-      "height": 600,
+      "height": 323,
       "alt": "About image"
     }
   },
@@ -60,27 +60,28 @@
   },
 
   "Promise": {
-    "title": "Our promise",
-    "id": "Promise",
+    "title": "Our values",
+    "id": "values",
     "image": {
-      "src": "/About-service-right.webp",
-      "width": 736,
-      "height": 600,
-      "alt": "Promise image"
+      "src": "/AboutValues.webp",
+      "width": 728,
+      "height": 567,
+      "alt": "Our values"
     },
     "data": [
       {
-        "title": "Convenience",
-        "desc": "We offer you the convenience of booking all your tourist services in one place, from accommodation to activities."
-      },
-      {
-        "title": "Quality Guaranteed",
-        "desc": "We work with trusted local providers to offer you authentic and high-quality experiences."
-      },
-      {
-        "title": "Personalized Attention",
-        "desc": "Our team is committed to providing personalized assistance and local recommendations to enhance your experience in Nosara."
-      }
-    ]
+        "title": "Integrity",
+        "desc": "We operate with honesty and transparency in all our dealings to build trust with our clients."
+    },
+    {
+        "title": "Excellence",
+        "desc": "We strive for excellence in every service we offer, ensuring high standards and exceptional experiences."
+    },
+    {
+        "title": "Responsibility",
+        "desc": "We ensure reliable service by honoring our commitments and addressing any issues that arise with prompt and effective solutions"
+    }
+    
+  ]
   }
 }
