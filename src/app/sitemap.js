@@ -24,6 +24,10 @@ export default async function sitemap() {
         }
     })
 
+    console.log(Houses);
+    console.log(Tours);
+    
+
     return [
         {
             url: 'https://nosarabookingcenter.com',
