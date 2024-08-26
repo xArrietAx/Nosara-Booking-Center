@@ -32,6 +32,13 @@ export function Footer() {
       </div>
       {menu.footer.map(renderWidgetMenuItem)}
     </div>
+    
+    </div>
+    <div className="py-5 bg-secondary text-sm">
+    <div className="container flex flex-wrap justify-between gap-3">
+    <span>Copyright © 2024 Nosara Booking Center. All rights reserved.</span>
+    <span>Created by ArrietA</span>
+    </div>
     </div>
   </footer>
 }

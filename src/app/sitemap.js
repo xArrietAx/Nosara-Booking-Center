@@ -6,18 +6,18 @@ export default async function sitemap() {
 
     const houses = await getHouses()
 
-    const Tours = tours.data.map(item => {
+    const Tours = tours.data.map(({name, id}) => {
         return {
-            url: `https://nosarabookingcenter.com/Tours/${item.name}/${item.id}`,
+            url: `https://nosarabookingcenter.com/Tours/${name.replace(/ /g, "-")}/${id}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.3,   
         }
     })
 
-    const Houses = houses.data.map(item => {
+    const Houses = houses.data.map(({name, id}) => {
         return {
-            url: `https://nosarabookingcenter.com/Vacation_rentals/${item.name}/${item.id}`,
+            url: `https://nosarabookingcenter.com//Vacation_rentals/${name.replace(/ /g, "-")}/${id}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.3,   
