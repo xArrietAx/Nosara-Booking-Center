@@ -1,6 +1,6 @@
 const title = "Discover Nosara: Vacation Homes, Tours, and Rentals"
 
-const description = "We specialize in providing vacation homes, exciting tours, and property management services in Nosara. Discover the best of Nosara with our wide range of rental options and activities. Experience Nosara like never before with our expert services and local insights for an unforgettable Nosara, Costa Rican getaway."
+const description = "We specialize in property management and offer vacation rentals, tours, shuttles, and various rentals like ATVs, golf carts, and cars in Nosara."
 
 const url = "https://www.nosarabookingcenter.com"
 

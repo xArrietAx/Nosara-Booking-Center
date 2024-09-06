@@ -1,7 +1,6 @@
-import { cache } from 'react';
-
 import { houses, house } from "./tables/houses";
 import { tours, tour } from "./tables/tours";
+import { cache } from 'react';
 
 const getHouses = cache(houses)
 const getHouse = cache(house)
