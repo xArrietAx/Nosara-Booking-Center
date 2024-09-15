@@ -1,9 +1,9 @@
 const metadataPropertyManagement = {
-    title: "Full-Service Property Management in Nosara",
-    description: "Maximise the value of your Nosara property with our professional management services. We take care of everything: maintenance, cleaning, and guest services, ensuring that your investment is always in the best hands.",
-    alternates: {
-      canonical: "/Property_management",
-    },
+  title: "Property Management in Nosara, Costa Rica",
+  description: "Discover reliable property management services in Nosara, Costa Rica. Our expert team offers personalized solutions to maintain and maximize the value of your investment, ensuring peace of mind for property owners.",
+  alternates: {
+    canonical: "/Property_management",
+  },
 }
 
 export { metadataPropertyManagement }

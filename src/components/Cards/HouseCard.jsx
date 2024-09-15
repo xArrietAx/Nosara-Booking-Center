@@ -11,7 +11,7 @@ export function HouseCard({ data, className, type = 1 }) {
   return (
     <Link href={`/Vacation_rentals/${name.replace(/ /g, "-")}/${id}`} className={`${className} ${type === 1 ? null : "border border-border rounded-2xl hover:shadow-xl transition-shadow" } `}>
       <div className="rounded-xl overflow-hidden">
-      <Image className="w-full h-56 bg-secondary object-cover transition-transform duration-500 hover:scale-110" src={galleryImages[0]} alt="image" width={350} height={250} loading="lazy" />
+      <Image className="w-full h-56 bg-secondary object-cover transition-transform duration-500 hover:scale-110" src={galleryImages[0]} alt={name} width={350} height={250} loading="lazy" />
       </div>
      
       <div className="p-4 pt-2 mt-2 space-y-3">

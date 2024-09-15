@@ -14,7 +14,7 @@ export function TourCard({ data, className, type = 1 }) {
         <Image
           className="w-full h-56 bg-secondary object-cover transition-transform duration-500 hover:scale-110"
           src={image}
-          alt="image"
+          alt={name}
           width={10000}
           height={10000}
           loading="lazy"

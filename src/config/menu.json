@@ -186,14 +186,17 @@
   "footerCopyright": [
     {
       "name": "Privacy & Policy",
-      "url": "/privacy-policy"
+      "url": "/Privacy-policy"
     },
     {
-      "name": "Terms of Service",
-      "url": "/terms-services"
+      "name": "Terms & conditions",
+      "url": "/Terms-conditions"
+    },
+    {
+      "name": "Cookies Policy",
+      "url": "/Cookies-policy"
     }
   ],
-
 
 
   
