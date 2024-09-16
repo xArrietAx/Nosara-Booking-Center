@@ -1,6 +1,6 @@
-const title = "Rent a Golf Cart in Nosara: Easy and Fun"
+const title = "Golf Cart Rentals in Nosara, Costa Rica"
 
-const description = "Rent a golf cart in Nosara for easy and enjoyable transportation. Book today and explore Nosara with comfort and style."
+const description = "Nosara Booking Center offers convenient golf cart rentals in Nosara, Costa Rica. Explore the area with ease using our well-maintained and reliable golf carts."
 
 const metadataGolfCart = {
     title,

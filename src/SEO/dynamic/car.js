@@ -1,4 +1,4 @@
-const title = "Rent a Car in Nosara: Convenience and Freedom"
+const title = "Rent a Car in Nosara, Costa Rica"
 
 const description = "Rent a car in Nosara and explore the area with ease. Book now for a hassle-free experience in Nosara, Costa Rica."
 

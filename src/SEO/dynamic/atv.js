@@ -1,6 +1,6 @@
-const title = "Rent Your ATV in Nosara: Your Adventure Awaits"
+const title = "ATV Rentals in Nosara, Costa Rica"
 
-const description = "Rent an ATV in Nosara for an exciting and memorable ride. Book now and experience the thrill of exploring Nosara, Costa Rica."
+const description = "Nosara Booking Center provides reliable ATV rentals in Nosara, Costa Rica. Rent an ATV for easy and efficient transportation around the area."
 
 const metadataAtv = {
     title,
