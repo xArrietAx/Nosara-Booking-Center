@@ -15,6 +15,10 @@ async function metadataTour(id){
     title: name, 
     description: info,
 
+    alternates: {
+      canonical: `/Tours/${name.replace(/ /g, "-")}/${id}`,
+    },
+
     openGraph: {
       title: name,
       description: info,

@@ -15,6 +15,10 @@ async function metadataVacationRental(id){
     title: name, 
     description: information,
 
+    alternates: {
+      canonical: `/Vacation_rentals/${name.replace(/ /g, "-")}/${id}`,
+    },
+
     openGraph: {
       title: name,
       description: information,
