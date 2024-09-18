@@ -1,26 +1,26 @@
 {
 
     "Hero":{
-        "title":"We Manage Your Nosara Property",
-        "desc":"Property Management for Your Nosara Home, Providing Expert Oversight, Routine Maintenance, and Personalized Support to Maximize Your Property’s Potential and Rental Income",
+        "title":"Property Management Nosara",
+        "desc":"Property Management services for Your Nosara Home, Providing Expert Oversight, Routine Maintenance, and Personalized Support to Maximize Your Property’s Potential and Rental Income",
         "btn":"I'm interested",
         "image": {
             "src":"/PropertyManagementHero.webp",
             "width": 640,
             "height": 659.8,
-            "alt":"Property Management image"
+            "alt":"Property Management Services"
         }
     },
 
     "Mission":{
         "title":"Our mission",
-        "desc":"Can you imagine arriving at your Nosara holiday home and finding it spotless, ready to enjoy? With us, that's reality. We take care of every detail, from cleaning to guest service, so that all you have to worry about is relaxing. Contact us and let's talk about your project!",
+        "desc":"Can you imagine arriving at your Nosara holiday home and finding it spotless, ready to enjoy? With our Nosara property management services, that's reality. We take care of every detail, from cleaning to guest services, so all you have to do is relax. Contact us and let us manage your property in Nosara, hassle-free!",
         "btn":"About us",
         "image": {
             "src":"/PropertyManagementOurMission.webp",
             "width": 1200,
             "height": 700,
-            "alt":"About image"
+            "alt":"Our Mission"
         }
     },
 
@@ -148,6 +148,6 @@
 
     "Contact":{
         "title":"Get in touch",
-        "desc":"Interested in our management services? Get in touch for more information."
+        "desc":"Interested in our property management services? Get in touch for more information."
     }
 }
