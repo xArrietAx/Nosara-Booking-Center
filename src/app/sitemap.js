@@ -26,7 +26,7 @@ export default async function sitemap() {
 
     return [
         {
-            url: 'https://nosarabookingcenter.com',
+            url: 'https://www.nosarabookingcenter.com',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 1.0,
