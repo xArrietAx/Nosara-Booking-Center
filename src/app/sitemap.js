@@ -8,7 +8,7 @@ export default async function sitemap() {
 
     const Tours = tours.data.map(({name, id}) => {
         return {
-            url: `https://nosarabookingcenter.com/Tours/${name.replace(/ /g, "-")}/${id}`,
+            url: `https://www.nosarabookingcenter.com/Tours/${name.replace(/ /g, "-")}/${id}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.3,   
@@ -17,16 +17,12 @@ export default async function sitemap() {
 
     const Houses = houses.data.map(({name, id}) => {
         return {
-            url: `https://nosarabookingcenter.com//Vacation_rentals/${name.replace(/ /g, "-")}/${id}`,
+            url: `https://www.nosarabookingcenter.com/Vacation_rentals/${name.replace(/ /g, "-")}/${id}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.3,   
         }
     })
-
-    console.log(Houses);
-    console.log(Tours);
-    
 
     return [
         {
@@ -36,61 +32,61 @@ export default async function sitemap() {
             priority: 1.0,
         },
         {
-            url: 'https://nosarabookingcenter.com/About',
+            url: 'https://www.nosarabookingcenter.com/About',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: 'https://nosarabookingcenter.com/Contact',
+            url: 'https://www.nosarabookingcenter.com/Contact',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
         },
         {
-            url: 'https://nosarabookingcenter.com/Vacation_rentals',
+            url: 'https://www.nosarabookingcenter.com/Vacation_rentals',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
-            url: 'https://nosarabookingcenter.com/Tours',
+            url: 'https://www.nosarabookingcenter.com/Tours',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
-            url: 'https://nosarabookingcenter.com/Property_management',
+            url: 'https://www.nosarabookingcenter.com/Property_management',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
-            url: 'https://nosarabookingcenter.com/Property_marketing',
+            url: 'https://www.nosarabookingcenter.com/Property_marketing',
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
-            url: 'https://nosarabookingcenter.com/Service/Shuttle',
+            url: 'https://www.nosarabookingcenter.com/Service/Shuttle',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
         },
         {
-            url: 'https://nosarabookingcenter.com/Service/ATV',
+            url: 'https://www.nosarabookingcenter.com/Service/ATV',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
         },
         {
-            url: 'https://nosarabookingcenter.com/Service/Golf_cart',
+            url: 'https://www.nosarabookingcenter.com/Service/Golf_cart',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
         },
         {
-            url: 'https://nosarabookingcenter.com/Service/Car',
+            url: 'https://www.nosarabookingcenter.com/Service/Car',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
