@@ -87,7 +87,7 @@ function Tabs({ category, setCategory }) {
   const tabs = [categories.Shuttle, categories.ATV, categories.GolfCart, categories.Car];
 
   return (
-    <ul className="ml-2 sm:ml-6 md:ml-12 flex space-x-5 sm:space-x-8 lg:space-x-11 overflow-x-auto">
+    <ul className="relative z-10 ml-2 sm:ml-6 md:ml-12 flex space-x-5 sm:space-x-8 lg:space-x-11 overflow-x-auto">
       {tabs.map((tab, i) => {
         const active = tab === category;
         return (

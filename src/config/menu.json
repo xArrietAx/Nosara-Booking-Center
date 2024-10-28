@@ -5,6 +5,10 @@
       "url": "/"
     },
     {
+      "name": "About",
+      "url": "/About"
+    },
+    {
       "name": "Contact us",
       "url": "/Contact"
     },
@@ -15,21 +19,6 @@
     {
       "name": "Tours",
       "url": "/Tours"
-    },
-    {
-      "name": "Services",
-        "url": "",
-        "hasChildren": true,
-        "children": [
-          {
-            "name": "Property management",
-            "url": "/Property_management"
-          },
-          {
-            "name":"Property marketing",
-            "url":"/Property_marketing"
-          }
-        ]
     },
     {
       "name": "Rentals",
@@ -78,21 +67,6 @@
       "url": "/Tours"
     },
     {
-      "name": "Services",
-        "url": "",
-        "hasChildren": true,
-        "children": [
-          {
-            "name": "Property management",
-            "url": "/Property_management"
-          },
-          {
-            "name":"Property marketing",
-            "url":"/Property_marketing"
-          }
-        ]
-    },
-    {
       "name": "Rentals",
         "url": "",
         "hasChildren": true,
@@ -134,14 +108,6 @@
         {
           "name": "Contact us",
           "url": "/Contact"
-        },
-        {
-          "name": "Vacation rentals",
-          "url": "/Vacation_rentals"
-        },
-        {
-          "name": "Tours",
-          "url": "/Tours"
         }
       ]
     },
@@ -172,12 +138,12 @@
       "title": "Services",
       "menus": [
         {
-          "name": "Property management",
-          "url": "/Property_management"
+          "name": "Vacation rentals",
+          "url": "/Vacation_rentals"
         },
         {
-          "name":"Property marketing",
-          "url":"/Property_marketing"
+          "name": "Tours",
+          "url": "/Tours"
         }
       ]
     }

@@ -28,7 +28,7 @@ export function NavItemDropDown({ title, childs = [], titleLink }) {
 
               return (
                 <li key={i + Date + Math.random()} >
-                  <Link href={e.url} className={`inline-block w-full py-2 cursor-pointer bg-hover hover:text-dark ${ active ? "text-primary" : null }`} onClick={() => setIsShowing(false)}>
+                  <Link href={e.url} className={`inline-block w-full py-2 cursor-pointer bg-hover ${ active ? "text-primary hover:bg-transparent" : "hover:text-dark" }`} onClick={() => setIsShowing(false)}>
                     {e.name}
                   </Link>
                 </li>
