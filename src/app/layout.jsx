@@ -7,6 +7,7 @@ import { Header2 } from "@/shared/Header2";
 import { Footer } from "@/shared/Footer";
 import "@splidejs/react-splide/css";
 import "react-day-picker/style.css";
+import dynamic from "next/dynamic";
 import Script from "next/script";
 import "../styles/main.css";
 
@@ -17,6 +18,11 @@ const poppins = Poppins({
 });
 
 export const metadata = metadataDefault;
+
+const Whatsapp = dynamic(() =>
+  import('@/components/Whatsapp/Whatsapp').then((mod) => mod.Whatsapp),
+{ssr: false}
+)
 
 export default function RootLayout({ children }) {
   return (
@@ -44,6 +50,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </ContextProvider>
         <Toaster />
+        <Whatsapp />
       </body>
     </html>
   );
