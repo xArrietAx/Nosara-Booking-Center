@@ -56,18 +56,6 @@ export default async function sitemap() {
             priority: 0.7,
         },
         {
-            url: 'https://www.nosarabookingcenter.com/Property_management',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.7,
-        },
-        {
-            url: 'https://www.nosarabookingcenter.com/Property_marketing',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.7,
-        },
-        {
             url: 'https://www.nosarabookingcenter.com/Service/Shuttle',
             lastModified: new Date(),
             changeFrequency: 'yearly',
