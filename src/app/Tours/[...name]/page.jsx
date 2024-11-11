@@ -1,23 +1,23 @@
 import { allIcons, FaRegClock, IoLocationOutline } from "@/icons/index";
 import { getTour, getTours } from "@/services/index";
 import Form from "@/components/Forms/Bookings/Form";
-import Image from "next/image";
 import { metadataTour } from "@/SEO/dynamic/tour";
+import { notFound } from "next/navigation";
+import Image from "next/image";
 
-  export async function generateStaticParams() {
+export async function generateStaticParams() {
   const { data } = await getTours()
   return data.map(({ id, name }) => ({ name: [name, id.toString()] }));
-  }
+}
 
-  export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
     return metadataTour(params.name[1])
-  }
+}
 
-  export default async function TourPage({ params }) {
+export default async function TourPage({ params }) {
+const { data, error } = await getTour(params.name[1]);
 
-  const { data, error } = await getTour(params.name[1]);
-
-  if (!data || error || data?.length === 0) {
+if (!data || error || data?.length === 0) {
     return notFound();
   }
   
@@ -191,4 +191,3 @@ import { metadataTour } from "@/SEO/dynamic/tour";
       </div>
     );
   }
-  

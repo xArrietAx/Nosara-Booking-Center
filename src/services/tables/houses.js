@@ -10,4 +10,3 @@ export async function house(id) {
   .eq('id', id );
   return { data, error };
 }
-

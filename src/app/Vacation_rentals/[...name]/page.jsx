@@ -1,30 +1,40 @@
 import { FiUser, IoLocationOutline, LiaBathSolid, LiaBedSolid, LiaDoorOpenSolid } from "@/icons/index";
 import { ImageCarrousel } from "@/components/VacationsRentals/ImagesCarrousel";
 import { ModalAmenities } from "@/components/VacationsRentals/ModalAmenities";
+import { metadataVacationRental } from "@/SEO/dynamic/vacationRental";
 import { ImageGrid } from "@/components/VacationsRentals/ImageGrid";
 import { getHouse, getHouses } from "@/services/index";
 import Form from "@/components/Forms/Bookings/Form";
 import { notFound } from "next/navigation";
-import { metadataVacationRental } from "@/SEO/dynamic/vacationRental";
 
 export async function generateStaticParams() {
-  const { data } = await getHouses()
+  const { data } = await getHouses();
   return data.map(({ id, name }) => ({ name: [name, id.toString()] }));
 }
 
 export async function generateMetadata({ params }) {
-  return metadataVacationRental(params.name[1])
+  return metadataVacationRental(params.name[1]);
 }
 
 export default async function HousePage({ params }) {
-  
   const { data, error } = await getHouse(params.name[1]);
 
   if (!data || error || data?.length === 0) {
     return notFound();
   }
 
-  const { name, information, location, galleryImages, price, beds, bedrooms, baths, maxGuests, avg } = data[0];
+  const {
+    name,
+    information,
+    location,
+    galleryImages,
+    price,
+    beds,
+    bedrooms,
+    baths,
+    maxGuests,
+    avg,
+  } = data[0];
 
   const renderSection1 = () => {
     return (
@@ -35,9 +45,7 @@ export default async function HousePage({ params }) {
           </h1>
           <span className="relative font-semibold text-2xl text-dark lg:hidden">
             ${price}
-            <span className="text-base text-text/60">
-              {" "}/ night
-            </span>
+            <span className="text-base text-text/60"> / night</span>
             {avg && (
               <span className="absolute -bottom-5 left-0 text-sm">Average</span>
             )}
@@ -53,7 +61,6 @@ export default async function HousePage({ params }) {
 
         <div className="overflow-hidden">
           <div className="scrollbar-hide flex gap-5 overflow-x-auto">
-            
             <div className="flex items-center flex-grow space-x-3">
               <FiUser className="size-6" />
               <div className="space-x-2 flex">
@@ -85,10 +92,8 @@ export default async function HousePage({ params }) {
                 <span className="hidden xs:inline-block">bedrooms</span>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     );
   };
@@ -106,7 +111,9 @@ export default async function HousePage({ params }) {
   const renderSection3 = () => {
     return (
       <div className="listingSection__wrap lg:hidden">
-        <h3 className="font-semibold text-2xl text-dark">Inquire more information</h3>
+        <h3 className="font-semibold text-2xl text-dark">
+          Inquire more information
+        </h3>
         <div className="w-14 border-b border-border"></div>
         <Form service={name} />
       </div>
@@ -139,9 +146,7 @@ function SideBar({ name, price, avg }) {
         <div className="w-full flex flex-col rounded-2xl border-b border-t border-l border-r border-border space-y-6 xl:space-y-7 pb-10 p-2 sm:p-4 xl:px-8 xl:py-6 shadow-xl">
           <span className="relative font-semibold text-3xl text-dark">
             ${price}
-            <span className="text-base text-text/60">
-              {" "}/ night
-            </span>
+            <span className="text-base text-text/60"> / night</span>
             {avg && (
               <span className="absolute -bottom-5 left-0 text-sm">Average</span>
             )}
