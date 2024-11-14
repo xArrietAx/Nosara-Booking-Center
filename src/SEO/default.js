@@ -1,6 +1,6 @@
-const title = "Discover Nosara: Property management, Vacation rentals, Tours, and Rentals"
+const title = "Discover Nosara: Vacation rentals, Tours, and Rentals"
 
-const description = "We specialize in vacation rentals, tours, shuttles, and rentals in Nosara. We also offer property management services in Nosara, Costa Rica, to keep your investment in top condition."
+const description = "We specialize in vacation rentals, tours, shuttles, and rentals like ATV, cars and golf carts in Nosara."
 
 const url = "https://www.nosarabookingcenter.com"
 
