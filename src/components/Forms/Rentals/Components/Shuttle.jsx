@@ -40,11 +40,11 @@ export function Shuttle({
       </div>
 
       <div>
-        <Label htmlFor="destination" >Destination ( Nosara - Liberia )</Label>
+        <Label htmlFor="destination" >Destination</Label>
         <Input
           type="text"
           id="destination"
-          placeholder="Start - End"
+          placeholder="Only to/from Nosara"
           required
           value={destination}
           onChange={(e) => setDestination(e.target.value)}
