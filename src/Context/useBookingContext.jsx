@@ -8,7 +8,6 @@ export function BookingProvider({ children }) {
 
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
-  const [destination, setDestination] = useState("");
   const [pickUp, setPickUp] = useState("");
   const [dropOff, setDropOff] = useState("");
   const [pickUpLocation, setPickUpLocation] = useState("");
@@ -43,7 +42,6 @@ export function BookingProvider({ children }) {
   const data = {
     name,
     phone,
-    destination,
     pickUpFormated,
     dropOffFormated,
     pickUpLocation,
@@ -66,7 +64,6 @@ export function BookingProvider({ children }) {
     }
     setName("");
     setPhone("");
-    setDestination("");
     setPickUp("");
     setDropOff("");
     setPickUpLocation("");
@@ -102,8 +99,6 @@ export function BookingProvider({ children }) {
     setName,
     phone, 
     setPhone,
-    destination,
-    setDestination,
     pickUp,
     pickUpFormated,
     setPickUp,

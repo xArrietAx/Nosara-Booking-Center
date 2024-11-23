@@ -10,7 +10,7 @@ export async function POST(req) {
 
     renameProp(body, "pickUpFormated", "pick_up")
     renameProp(body, "dropOffFormated", "drop_off")
-    renameProp(body, "pickUpLocatiion", "pick_up_location")
+    renameProp(body, "pickUpLocation", "pick_up_location")
     renameProp(body, "dropOffLocation", "drop_off_location")
     
     let transport = await createTransport({

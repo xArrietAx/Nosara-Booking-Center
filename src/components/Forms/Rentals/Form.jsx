@@ -18,12 +18,12 @@ export default function Form({ rent }) {
 
   const [loading, setLoading] = useState(false)
 
-  const { reset, filteredData, name, setName, destination, setDestination, pickUpFormated, setPickUp, dropOffFormated, setDropOff, pickUpLocation, setPickUpLocation, dropOffLocation, setDropOffLocation, seats, setSeats, adults, setAdults, childrens, setChildrens, departureTime, setDepartureTime, luggages, setLuggages, surfboard, setSurfboard, airline, setAirline, flighNumber, setFlighNumber, arrivalTime, setArrivalTime } = useContext(Context)
+  const { reset, filteredData, name, setName, pickUpFormated, setPickUp, dropOffFormated, setDropOff, pickUpLocation, setPickUpLocation, dropOffLocation, setDropOffLocation, seats, setSeats, adults, setAdults, childrens, setChildrens, departureTime, setDepartureTime, luggages, setLuggages, surfboard, setSurfboard, airline, setAirline, flighNumber, setFlighNumber, arrivalTime, setArrivalTime, time, setTime } = useContext(Context)
 
   function renderForm() {
     switch (rent) {
         case "Shuttle":
-         return <Shuttle destination={destination} setDestination={setDestination} pickUp={pickUpFormated} setPickUp={setPickUp} adults={adults} setAdults={setAdults} childrens={childrens} setChildrens={setChildrens} departureTime={departureTime} setDepartureTime={setDepartureTime} luggages={luggages} setLuggages={setLuggages} surfboard={surfboard} setSurfboard={setSurfboard} airline={airline} setAirline={setAirline} flighNumber={flighNumber} setFlighNumber={setFlighNumber} arrivalTime={arrivalTime} setArrivalTime={setArrivalTime} />;
+         return <Shuttle time={time} setTime={setTime} pickUpLocation={pickUpLocation} setPickUpLocation={setPickUpLocation} dropOffLocation={dropOffLocation} setDropOffLocation={setDropOffLocation} pickUp={pickUpFormated} setPickUp={setPickUp} adults={adults} setAdults={setAdults} childrens={childrens} setChildrens={setChildrens} departureTime={departureTime} setDepartureTime={setDepartureTime} luggages={luggages} setLuggages={setLuggages} surfboard={surfboard} setSurfboard={setSurfboard} airline={airline} setAirline={setAirline} flighNumber={flighNumber} setFlighNumber={setFlighNumber} arrivalTime={arrivalTime} setArrivalTime={setArrivalTime} />;
     
         case "ATV":
          return <ATV pickUp={pickUpFormated} setPickUp={setPickUp} dropOff={dropOffFormated} setDropOff={setDropOff} />;

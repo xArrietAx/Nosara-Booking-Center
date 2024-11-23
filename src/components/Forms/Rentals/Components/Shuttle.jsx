@@ -3,8 +3,10 @@ import { Input } from "@/shared/Input";
 import { Label } from "@/shared/Label";
 
 export function Shuttle({
-  destination,
-  setDestination,
+  pickUpLocation,
+  setPickUpLocation,
+  dropOffLocation,
+  setDropOffLocation,
   pickUp,
   setPickUp,
   adults,
@@ -28,7 +30,7 @@ export function Shuttle({
   return (
     <>
       <div>
-        <Label htmlFor="pickUp">Pick up</Label>
+        <Label htmlFor="pickUp">Date</Label>
         <Input
           type="date"
           id="pickUp"
@@ -39,19 +41,33 @@ export function Shuttle({
         />
       </div>
 
+      <div className="grid gap-y-6 md:grid-cols-2 md:gap-x-3">
       <div>
-        <Label htmlFor="destination" >Destination</Label>
+        <Label htmlFor="pickUpLocation">Pick up location</Label>
         <Input
           type="text"
-          id="destination"
-          placeholder="Only to/from Nosara"
+          id="pickUpLocation"
+          placeholder="Airport, hotel, house or any location"
+          value={pickUpLocation}
+          onChange={(e) => setPickUpLocation(e.target.value)}
           required
-          value={destination}
-          onChange={(e) => setDestination(e.target.value)}
         />
       </div>
 
-      <div className="grid gap-y-6 md:grid-cols-2 md:gap-x-3">
+      <div>
+        <Label htmlFor="dropOffLocation">Drop off location</Label>
+        <Input
+          type="text"
+          id="dropOffLocation"
+          placeholder="Airport, hotel, house or any location"
+          value={dropOffLocation}
+          onChange={(e) => setDropOffLocation(e.target.value)}
+          required
+        />
+      </div>
+      </div>
+
+
         <div>
           <Label htmlFor="adults">Adults</Label>
           <Input
@@ -77,7 +93,7 @@ export function Shuttle({
             required
           />
         </div>
-      </div>
+    
 
       <div>
         <Label htmlFor="luggages" >Luggages</Label>
